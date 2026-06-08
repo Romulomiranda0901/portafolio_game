@@ -1085,7 +1085,7 @@
             }
             return dispatcher.useContext(Context);
           }
-          function useState12(initialState) {
+          function useState11(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1097,7 +1097,7 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useRef(initialValue);
           }
-          function useEffect14(create, deps) {
+          function useEffect13(create, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useEffect(create, deps);
           }
@@ -1113,7 +1113,7 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useCallback(callback, deps);
           }
-          function useMemo10(create, deps) {
+          function useMemo9(create, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useMemo(create, deps);
           }
@@ -1880,15 +1880,15 @@
           exports.useContext = useContext10;
           exports.useDebugValue = useDebugValue;
           exports.useDeferredValue = useDeferredValue;
-          exports.useEffect = useEffect14;
+          exports.useEffect = useEffect13;
           exports.useId = useId2;
           exports.useImperativeHandle = useImperativeHandle;
           exports.useInsertionEffect = useInsertionEffect;
           exports.useLayoutEffect = useLayoutEffect4;
-          exports.useMemo = useMemo10;
+          exports.useMemo = useMemo9;
           exports.useReducer = useReducer;
           exports.useRef = useRef9;
-          exports.useState = useState12;
+          exports.useState = useState11;
           exports.useSyncExternalStore = useSyncExternalStore;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -2435,7 +2435,7 @@
           var HostPortal = 4;
           var HostComponent = 5;
           var HostText = 6;
-          var Fragment10 = 7;
+          var Fragment9 = 7;
           var Mode = 8;
           var ContextConsumer = 9;
           var ContextProvider = 10;
@@ -3592,7 +3592,7 @@
                 return "DehydratedFragment";
               case ForwardRef:
                 return getWrappedName$1(type, type.render, "ForwardRef");
-              case Fragment10:
+              case Fragment9:
                 return "Fragment";
               case HostComponent:
                 return type;
@@ -12021,7 +12021,7 @@
               }
             }
             function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-              if (current2 === null || current2.tag !== Fragment10) {
+              if (current2 === null || current2.tag !== Fragment9) {
                 var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
                 created.return = returnFiber;
                 return created;
@@ -12424,7 +12424,7 @@
                 if (child.key === key) {
                   var elementType = element.type;
                   if (elementType === REACT_FRAGMENT_TYPE) {
-                    if (child.tag === Fragment10) {
+                    if (child.tag === Fragment9) {
                       deleteRemainingChildren(returnFiber, child.sibling);
                       var existing = useFiber(child, element.props.children);
                       existing.return = returnFiber;
@@ -17900,7 +17900,7 @@
                 var _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
                 return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
               }
-              case Fragment10:
+              case Fragment9:
                 return updateFragment(current2, workInProgress2, renderLanes2);
               case Mode:
                 return updateMode(current2, workInProgress2, renderLanes2);
@@ -18172,7 +18172,7 @@
               case SimpleMemoComponent:
               case FunctionComponent:
               case ForwardRef:
-              case Fragment10:
+              case Fragment9:
               case Mode:
               case Profiler:
               case ContextConsumer:
@@ -22433,7 +22433,7 @@
             return fiber;
           }
           function createFiberFromFragment(elements, mode, lanes, key) {
-            var fiber = createFiber(Fragment10, elements, key, mode);
+            var fiber = createFiber(Fragment9, elements, key, mode);
             fiber.lanes = lanes;
             return fiber;
           }
@@ -24465,11 +24465,11 @@
               return jsxWithValidation(type, props, key, false);
             }
           }
-          var jsx25 = jsxWithValidationDynamic;
-          var jsxs21 = jsxWithValidationStatic;
+          var jsx14 = jsxWithValidationDynamic;
+          var jsxs11 = jsxWithValidationStatic;
           exports.Fragment = REACT_FRAGMENT_TYPE;
-          exports.jsx = jsx25;
-          exports.jsxs = jsxs21;
+          exports.jsx = jsx14;
+          exports.jsxs = jsxs11;
         })();
       }
     }
@@ -27147,7 +27147,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/pages/Home.tsx
-  var import_react18 = __toESM(require_react());
+  var import_react17 = __toESM(require_react());
 
   // src/components/ui/button.tsx
   var React14 = __toESM(require_react());
@@ -30768,31 +30768,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   ];
   var ArrowLeft = createLucideIcon("arrow-left", __iconNode);
 
-  // node_modules/lucide-react/dist/esm/icons/arrow-right-left.js
-  var __iconNode2 = [
-    ["path", { d: "m16 3 4 4-4 4", key: "1x1c3m" }],
-    ["path", { d: "M20 7H4", key: "zbl0bi" }],
-    ["path", { d: "m8 21-4-4 4-4", key: "h9nckh" }],
-    ["path", { d: "M4 17h16", key: "g4d7ey" }]
-  ];
-  var ArrowRightLeft = createLucideIcon("arrow-right-left", __iconNode2);
-
   // node_modules/lucide-react/dist/esm/icons/arrow-right.js
-  var __iconNode3 = [
+  var __iconNode2 = [
     ["path", { d: "M5 12h14", key: "1ays0h" }],
     ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
   ];
-  var ArrowRight = createLucideIcon("arrow-right", __iconNode3);
-
-  // node_modules/lucide-react/dist/esm/icons/arrow-up.js
-  var __iconNode4 = [
-    ["path", { d: "m5 12 7-7 7 7", key: "hav0vg" }],
-    ["path", { d: "M12 19V5", key: "x0mq9r" }]
-  ];
-  var ArrowUp = createLucideIcon("arrow-up", __iconNode4);
+  var ArrowRight = createLucideIcon("arrow-right", __iconNode2);
 
   // node_modules/lucide-react/dist/esm/icons/award.js
-  var __iconNode5 = [
+  var __iconNode3 = [
     [
       "path",
       {
@@ -30802,89 +30786,33 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ],
     ["circle", { cx: "12", cy: "8", r: "6", key: "1vp47v" }]
   ];
-  var Award = createLucideIcon("award", __iconNode5);
-
-  // node_modules/lucide-react/dist/esm/icons/boxes.js
-  var __iconNode6 = [
-    [
-      "path",
-      {
-        d: "M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z",
-        key: "lc1i9w"
-      }
-    ],
-    ["path", { d: "m7 16.5-4.74-2.85", key: "1o9zyk" }],
-    ["path", { d: "m7 16.5 5-3", key: "va8pkn" }],
-    ["path", { d: "M7 16.5v5.17", key: "jnp8gn" }],
-    [
-      "path",
-      {
-        d: "M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z",
-        key: "8zsnat"
-      }
-    ],
-    ["path", { d: "m17 16.5-5-3", key: "8arw3v" }],
-    ["path", { d: "m17 16.5 4.74-2.85", key: "8rfmw" }],
-    ["path", { d: "M17 16.5v5.17", key: "k6z78m" }],
-    [
-      "path",
-      {
-        d: "M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z",
-        key: "1xygjf"
-      }
-    ],
-    ["path", { d: "M12 8 7.26 5.15", key: "1vbdud" }],
-    ["path", { d: "m12 8 4.74-2.85", key: "3rx089" }],
-    ["path", { d: "M12 13.5V8", key: "1io7kd" }]
-  ];
-  var Boxes = createLucideIcon("boxes", __iconNode6);
+  var Award = createLucideIcon("award", __iconNode3);
 
   // node_modules/lucide-react/dist/esm/icons/briefcase.js
-  var __iconNode7 = [
+  var __iconNode4 = [
     ["path", { d: "M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16", key: "jecpp" }],
     ["rect", { width: "20", height: "14", x: "2", y: "6", rx: "2", key: "i6l2r4" }]
   ];
-  var Briefcase = createLucideIcon("briefcase", __iconNode7);
+  var Briefcase = createLucideIcon("briefcase", __iconNode4);
 
   // node_modules/lucide-react/dist/esm/icons/check.js
-  var __iconNode8 = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-  var Check = createLucideIcon("check", __iconNode8);
+  var __iconNode5 = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+  var Check = createLucideIcon("check", __iconNode5);
 
   // node_modules/lucide-react/dist/esm/icons/chevron-right.js
-  var __iconNode9 = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
-  var ChevronRight = createLucideIcon("chevron-right", __iconNode9);
+  var __iconNode6 = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
+  var ChevronRight = createLucideIcon("chevron-right", __iconNode6);
 
   // node_modules/lucide-react/dist/esm/icons/circle-help.js
-  var __iconNode10 = [
+  var __iconNode7 = [
     ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
     ["path", { d: "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3", key: "1u773s" }],
     ["path", { d: "M12 17h.01", key: "p32p05" }]
   ];
-  var CircleHelp = createLucideIcon("circle-help", __iconNode10);
-
-  // node_modules/lucide-react/dist/esm/icons/clock.js
-  var __iconNode11 = [
-    ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-    ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
-  ];
-  var Clock = createLucideIcon("clock", __iconNode11);
-
-  // node_modules/lucide-react/dist/esm/icons/cloud.js
-  var __iconNode12 = [
-    ["path", { d: "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z", key: "p7xjir" }]
-  ];
-  var Cloud = createLucideIcon("cloud", __iconNode12);
-
-  // node_modules/lucide-react/dist/esm/icons/code-xml.js
-  var __iconNode13 = [
-    ["path", { d: "m18 16 4-4-4-4", key: "1inbqp" }],
-    ["path", { d: "m6 8-4 4 4 4", key: "15zrgr" }],
-    ["path", { d: "m14.5 4-5 16", key: "e7oirm" }]
-  ];
-  var CodeXml = createLucideIcon("code-xml", __iconNode13);
+  var CircleHelp = createLucideIcon("circle-help", __iconNode7);
 
   // node_modules/lucide-react/dist/esm/icons/compass.js
-  var __iconNode14 = [
+  var __iconNode8 = [
     [
       "path",
       {
@@ -30894,10 +30822,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ],
     ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
   ];
-  var Compass = createLucideIcon("compass", __iconNode14);
+  var Compass = createLucideIcon("compass", __iconNode8);
 
   // node_modules/lucide-react/dist/esm/icons/cpu.js
-  var __iconNode15 = [
+  var __iconNode9 = [
     ["path", { d: "M12 20v2", key: "1lh1kg" }],
     ["path", { d: "M12 2v2", key: "tus03m" }],
     ["path", { d: "M17 20v2", key: "1rnc9c" }],
@@ -30913,69 +30841,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["rect", { x: "4", y: "4", width: "16", height: "16", rx: "2", key: "1vbyd7" }],
     ["rect", { x: "8", y: "8", width: "8", height: "8", rx: "1", key: "z9xiuo" }]
   ];
-  var Cpu = createLucideIcon("cpu", __iconNode15);
-
-  // node_modules/lucide-react/dist/esm/icons/funnel.js
-  var __iconNode16 = [
-    [
-      "path",
-      {
-        d: "M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z",
-        key: "sc7q7i"
-      }
-    ]
-  ];
-  var Funnel = createLucideIcon("funnel", __iconNode16);
-
-  // node_modules/lucide-react/dist/esm/icons/gamepad-2.js
-  var __iconNode17 = [
-    ["line", { x1: "6", x2: "10", y1: "11", y2: "11", key: "1gktln" }],
-    ["line", { x1: "8", x2: "8", y1: "9", y2: "13", key: "qnk9ow" }],
-    ["line", { x1: "15", x2: "15.01", y1: "12", y2: "12", key: "krot7o" }],
-    ["line", { x1: "18", x2: "18.01", y1: "10", y2: "10", key: "1lcuu1" }],
-    [
-      "path",
-      {
-        d: "M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z",
-        key: "mfqc10"
-      }
-    ]
-  ];
-  var Gamepad2 = createLucideIcon("gamepad-2", __iconNode17);
-
-  // node_modules/lucide-react/dist/esm/icons/git-fork.js
-  var __iconNode18 = [
-    ["circle", { cx: "12", cy: "18", r: "3", key: "1mpf1b" }],
-    ["circle", { cx: "6", cy: "6", r: "3", key: "1lh9wr" }],
-    ["circle", { cx: "18", cy: "6", r: "3", key: "1h7g24" }],
-    ["path", { d: "M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9", key: "1uq4wg" }],
-    ["path", { d: "M12 12v3", key: "158kv8" }]
-  ];
-  var GitFork = createLucideIcon("git-fork", __iconNode18);
-
-  // node_modules/lucide-react/dist/esm/icons/github.js
-  var __iconNode19 = [
-    [
-      "path",
-      {
-        d: "M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4",
-        key: "tonef"
-      }
-    ],
-    ["path", { d: "M9 18c-4.51 2-5-2-7-2", key: "9comsn" }]
-  ];
-  var Github = createLucideIcon("github", __iconNode19);
-
-  // node_modules/lucide-react/dist/esm/icons/globe.js
-  var __iconNode20 = [
-    ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-    ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-    ["path", { d: "M2 12h20", key: "9i4pu4" }]
-  ];
-  var Globe = createLucideIcon("globe", __iconNode20);
+  var Cpu = createLucideIcon("cpu", __iconNode9);
 
   // node_modules/lucide-react/dist/esm/icons/house.js
-  var __iconNode21 = [
+  var __iconNode10 = [
     ["path", { d: "M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8", key: "5wwlr5" }],
     [
       "path",
@@ -30985,27 +30854,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       }
     ]
   ];
-  var House = createLucideIcon("house", __iconNode21);
-
-  // node_modules/lucide-react/dist/esm/icons/image-off.js
-  var __iconNode22 = [
-    ["line", { x1: "2", x2: "22", y1: "2", y2: "22", key: "a6p6uj" }],
-    ["path", { d: "M10.41 10.41a2 2 0 1 1-2.83-2.83", key: "1bzlo9" }],
-    ["line", { x1: "13.5", x2: "6", y1: "13.5", y2: "21", key: "1q0aeu" }],
-    ["line", { x1: "18", x2: "21", y1: "12", y2: "15", key: "5mozeu" }],
-    [
-      "path",
-      {
-        d: "M3.59 3.59A1.99 1.99 0 0 0 3 5v14a2 2 0 0 0 2 2h14c.55 0 1.052-.22 1.41-.59",
-        key: "mmje98"
-      }
-    ],
-    ["path", { d: "M21 15V5a2 2 0 0 0-2-2H9", key: "43el77" }]
-  ];
-  var ImageOff = createLucideIcon("image-off", __iconNode22);
+  var House = createLucideIcon("house", __iconNode10);
 
   // node_modules/lucide-react/dist/esm/icons/keyboard.js
-  var __iconNode23 = [
+  var __iconNode11 = [
     ["path", { d: "M10 8h.01", key: "1r9ogq" }],
     ["path", { d: "M12 12h.01", key: "1mp3jc" }],
     ["path", { d: "M14 8h.01", key: "1primd" }],
@@ -31016,10 +30868,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["path", { d: "M8 12h.01", key: "czm47f" }],
     ["rect", { width: "20", height: "16", x: "2", y: "4", rx: "2", key: "18n3k1" }]
   ];
-  var Keyboard = createLucideIcon("keyboard", __iconNode23);
+  var Keyboard = createLucideIcon("keyboard", __iconNode11);
 
   // node_modules/lucide-react/dist/esm/icons/languages.js
-  var __iconNode24 = [
+  var __iconNode12 = [
     ["path", { d: "m5 8 6 6", key: "1wu5hv" }],
     ["path", { d: "m4 14 6-6 2-3", key: "1k1g8d" }],
     ["path", { d: "M2 5h12", key: "or177f" }],
@@ -31027,36 +30879,23 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["path", { d: "m22 22-5-10-5 10", key: "don7ne" }],
     ["path", { d: "M14 18h6", key: "1m8k6r" }]
   ];
-  var Languages = createLucideIcon("languages", __iconNode24);
+  var Languages = createLucideIcon("languages", __iconNode12);
 
   // node_modules/lucide-react/dist/esm/icons/mail.js
-  var __iconNode25 = [
+  var __iconNode13 = [
     ["rect", { width: "20", height: "16", x: "2", y: "4", rx: "2", key: "18n3k1" }],
     ["path", { d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7", key: "1ocrg3" }]
   ];
-  var Mail = createLucideIcon("mail", __iconNode25);
-
-  // node_modules/lucide-react/dist/esm/icons/map-pin.js
-  var __iconNode26 = [
-    [
-      "path",
-      {
-        d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
-        key: "1r0f0z"
-      }
-    ],
-    ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
-  ];
-  var MapPin = createLucideIcon("map-pin", __iconNode26);
+  var Mail = createLucideIcon("mail", __iconNode13);
 
   // node_modules/lucide-react/dist/esm/icons/moon.js
-  var __iconNode27 = [
+  var __iconNode14 = [
     ["path", { d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z", key: "a7tn18" }]
   ];
-  var Moon = createLucideIcon("moon", __iconNode27);
+  var Moon = createLucideIcon("moon", __iconNode14);
 
   // node_modules/lucide-react/dist/esm/icons/mouse-pointer-click.js
-  var __iconNode28 = [
+  var __iconNode15 = [
     ["path", { d: "M14 4.1 12 6", key: "ita8i4" }],
     ["path", { d: "m5.1 8-2.9-.8", key: "1go3kf" }],
     ["path", { d: "m6 12-1.9 2", key: "mnht97" }],
@@ -31069,10 +30908,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       }
     ]
   ];
-  var MousePointerClick = createLucideIcon("mouse-pointer-click", __iconNode28);
+  var MousePointerClick = createLucideIcon("mouse-pointer-click", __iconNode15);
 
   // node_modules/lucide-react/dist/esm/icons/palette.js
-  var __iconNode29 = [
+  var __iconNode16 = [
     [
       "path",
       {
@@ -31085,43 +30924,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["circle", { cx: "6.5", cy: "12.5", r: ".5", fill: "currentColor", key: "qy21gx" }],
     ["circle", { cx: "8.5", cy: "7.5", r: ".5", fill: "currentColor", key: "fotxhn" }]
   ];
-  var Palette = createLucideIcon("palette", __iconNode29);
-
-  // node_modules/lucide-react/dist/esm/icons/printer.js
-  var __iconNode30 = [
-    [
-      "path",
-      {
-        d: "M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2",
-        key: "143wyd"
-      }
-    ],
-    ["path", { d: "M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6", key: "1itne7" }],
-    ["rect", { x: "6", y: "14", width: "12", height: "8", rx: "1", key: "1ue0tg" }]
-  ];
-  var Printer = createLucideIcon("printer", __iconNode30);
-
-  // node_modules/lucide-react/dist/esm/icons/quote.js
-  var __iconNode31 = [
-    [
-      "path",
-      {
-        d: "M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z",
-        key: "rib7q0"
-      }
-    ],
-    [
-      "path",
-      {
-        d: "M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z",
-        key: "1ymkrd"
-      }
-    ]
-  ];
-  var Quote = createLucideIcon("quote", __iconNode31);
+  var Palette = createLucideIcon("palette", __iconNode16);
 
   // node_modules/lucide-react/dist/esm/icons/settings.js
-  var __iconNode32 = [
+  var __iconNode17 = [
     [
       "path",
       {
@@ -31131,10 +30937,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ],
     ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
   ];
-  var Settings = createLucideIcon("settings", __iconNode32);
+  var Settings = createLucideIcon("settings", __iconNode17);
 
   // node_modules/lucide-react/dist/esm/icons/shield-check.js
-  var __iconNode33 = [
+  var __iconNode18 = [
     [
       "path",
       {
@@ -31144,10 +30950,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ],
     ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
   ];
-  var ShieldCheck = createLucideIcon("shield-check", __iconNode33);
+  var ShieldCheck = createLucideIcon("shield-check", __iconNode18);
 
   // node_modules/lucide-react/dist/esm/icons/sliders-horizontal.js
-  var __iconNode34 = [
+  var __iconNode19 = [
     ["line", { x1: "21", x2: "14", y1: "4", y2: "4", key: "obuewd" }],
     ["line", { x1: "10", x2: "3", y1: "4", y2: "4", key: "1q6298" }],
     ["line", { x1: "21", x2: "12", y1: "12", y2: "12", key: "1iu8h1" }],
@@ -31158,29 +30964,17 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["line", { x1: "8", x2: "8", y1: "10", y2: "14", key: "1i6ji0" }],
     ["line", { x1: "16", x2: "16", y1: "18", y2: "22", key: "1lctlv" }]
   ];
-  var SlidersHorizontal = createLucideIcon("sliders-horizontal", __iconNode34);
+  var SlidersHorizontal = createLucideIcon("sliders-horizontal", __iconNode19);
 
   // node_modules/lucide-react/dist/esm/icons/smartphone.js
-  var __iconNode35 = [
+  var __iconNode20 = [
     ["rect", { width: "14", height: "20", x: "5", y: "2", rx: "2", ry: "2", key: "1yt0o3" }],
     ["path", { d: "M12 18h.01", key: "mhygvu" }]
   ];
-  var Smartphone = createLucideIcon("smartphone", __iconNode35);
-
-  // node_modules/lucide-react/dist/esm/icons/star.js
-  var __iconNode36 = [
-    [
-      "path",
-      {
-        d: "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",
-        key: "r04s7s"
-      }
-    ]
-  ];
-  var Star = createLucideIcon("star", __iconNode36);
+  var Smartphone = createLucideIcon("smartphone", __iconNode20);
 
   // node_modules/lucide-react/dist/esm/icons/sun.js
-  var __iconNode37 = [
+  var __iconNode21 = [
     ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
     ["path", { d: "M12 2v2", key: "tus03m" }],
     ["path", { d: "M12 20v2", key: "1lh1kg" }],
@@ -31191,17 +30985,17 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
     ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
   ];
-  var Sun = createLucideIcon("sun", __iconNode37);
+  var Sun = createLucideIcon("sun", __iconNode21);
 
   // node_modules/lucide-react/dist/esm/icons/terminal.js
-  var __iconNode38 = [
+  var __iconNode22 = [
     ["polyline", { points: "4 17 10 11 4 5", key: "akl6gq" }],
     ["line", { x1: "12", x2: "20", y1: "19", y2: "19", key: "q2wloq" }]
   ];
-  var Terminal = createLucideIcon("terminal", __iconNode38);
+  var Terminal = createLucideIcon("terminal", __iconNode22);
 
   // node_modules/lucide-react/dist/esm/icons/volume-2.js
-  var __iconNode39 = [
+  var __iconNode23 = [
     [
       "path",
       {
@@ -31212,10 +31006,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["path", { d: "M16 9a5 5 0 0 1 0 6", key: "1q6k2b" }],
     ["path", { d: "M19.364 18.364a9 9 0 0 0 0-12.728", key: "ijwkga" }]
   ];
-  var Volume2 = createLucideIcon("volume-2", __iconNode39);
+  var Volume2 = createLucideIcon("volume-2", __iconNode23);
 
   // node_modules/lucide-react/dist/esm/icons/volume-x.js
-  var __iconNode40 = [
+  var __iconNode24 = [
     [
       "path",
       {
@@ -31226,14 +31020,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ["line", { x1: "22", x2: "16", y1: "9", y2: "15", key: "1ewh16" }],
     ["line", { x1: "16", x2: "22", y1: "9", y2: "15", key: "5ykzw1" }]
   ];
-  var VolumeX = createLucideIcon("volume-x", __iconNode40);
+  var VolumeX = createLucideIcon("volume-x", __iconNode24);
 
   // node_modules/lucide-react/dist/esm/icons/x.js
-  var __iconNode41 = [
+  var __iconNode25 = [
     ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
     ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
   ];
-  var X = createLucideIcon("x", __iconNode41);
+  var X = createLucideIcon("x", __iconNode25);
 
   // src/contexts/SettingsContext.tsx
   var import_react3 = __toESM(require_react());
@@ -34156,9 +33950,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     cvUrl,
     githubUrl,
     email,
-    onOpenSettings,
-    gameMode,
-    onToggleGameMode
+    onOpenSettings
   }) {
     const { resolvedTheme, toggleTheme, settings, update } = useSettings();
     const { t: t2, i18n } = useTranslation("common");
@@ -34191,33 +33983,6 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
     return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("header", { className: "sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 no-print", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "mx-auto max-w-6xl px-4 py-3 flex items-center gap-3", children: [
       /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: "#home", className: "font-semibold tracking-tight text-lg shrink-0", children: "Romulo Miranda" }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("nav", { className: "hidden md:flex items-center gap-1 mx-2 overflow-x-auto", children: sectionIds.map((id) => {
-        const labelMap = {
-          home: t2("nav.home", { defaultValue: "Inicio" }),
-          about: t2("nav.about", { defaultValue: "Sobre m\xED" }),
-          skills: t2("nav.skills", { defaultValue: "Habilidades" }),
-          services: t2("nav.services", { defaultValue: "Servicios" }),
-          experience: t2("nav.experience", { defaultValue: "Experiencia" }),
-          projects: t2("nav.projects", { defaultValue: "Proyectos" }),
-          certifications: t2("nav.certifications", { defaultValue: "Certificaciones" })
-        };
-        const isActive = activeId === id;
-        return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-          "a",
-          {
-            href: `#${id}`,
-            onClick: () => {
-              if (gameMode) {
-                onToggleGameMode();
-              }
-            },
-            "aria-current": isActive ? "page" : void 0,
-            className: `px-3 py-1.5 rounded-md text-sm transition font-medium ${isActive ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`,
-            children: labelMap[id] ?? id
-          },
-          id
-        );
-      }) }),
       /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ml-auto flex items-center gap-2", children: [
         /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
           Button,
@@ -34259,19 +34024,6 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(
-          Button,
-          {
-            variant: gameMode ? "default" : "outline",
-            className: gameMode ? "bg-primary text-primary-foreground border-transparent animate-pulse mr-1" : "bg-transparent mr-1",
-            onClick: onToggleGameMode,
-            title: gameMode ? "Modo Web Cl\xE1sico" : "Modo Arcade Juego",
-            children: [
-              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Gamepad2, { className: "size-4 mr-2" }),
-              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { className: "hidden sm:inline", children: gameMode ? "Modo Web" : "Modo Arcade" })
-            ]
-          }
-        ),
         /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
           Button,
           {
@@ -34343,452 +34095,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ] }) });
   }
 
-  // src/components/layout/PrintStyles.tsx
-  var import_jsx_runtime4 = __toESM(require_jsx_runtime());
-  function PrintStyles() {
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("style", { children: `
-      @media print {
-        .no-print { display: none !important; }
-        header, footer { display: none !important; }
-        #print-area { padding: 0 !important; }
-        a { text-decoration: none; color: inherit; }
-        @page { margin: 16mm; }
-        body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-      }
-    ` });
-  }
-
-  // src/components/sections/Hero.tsx
-  var import_jsx_runtime5 = __toESM(require_jsx_runtime());
-  function Hero({ name, title, avatarUrl, cvUrl, githubUrl }) {
-    const { t: t2 } = useTranslation("common");
-    return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("section", { id: "home", className: "mx-auto max-w-6xl px-4 py-12 md:py-20 relative overflow-hidden", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "relative z-10 grid grid-cols-1 md:grid-cols-[auto,1fr] items-center gap-8 md:gap-12", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "relative size-32 md:size-40 rounded-full overflow-hidden ring-4 ring-primary/80 ring-offset-4 ring-offset-background hover:scale-105 transition-all duration-500 shadow-xl shadow-primary/10 group", children: avatarUrl ? /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("img", { src: avatarUrl, alt: name, className: "w-full h-full object-cover group-hover:scale-110 transition duration-500" }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("img", { src: "https://pub-cdn.sider.ai/u/U09GHALYW1O/web-coder/689be3e3a616cfbf06700a6d/resource/447e8043-97cb-4f0d-8d79-c6d4cdb99a1d.jpg", className: "object-cover w-full h-full group-hover:scale-110 transition duration-500", alt: name }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 mb-3 animate-pulse", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "size-2 rounded-full bg-emerald-500" }),
-            t2("hero.status", { defaultValue: "Disponible para trabajar" })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-sm uppercase tracking-widest text-muted-foreground font-semibold", children: t2("hero.hello") }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { className: "text-3xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-foreground via-foreground/90 to-primary bg-clip-text text-transparent mt-1", children: name }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-lg md:text-xl font-medium text-muted-foreground/95 mt-2 max-w-2xl leading-relaxed", children: t2("hero.role") }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "mt-6 flex flex-wrap items-center gap-3", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("a", { href: githubUrl, target: "_blank", rel: "noreferrer", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(Button, { variant: "outline", className: "bg-transparent hover:bg-primary/5 hover:text-primary border-primary/20 hover:border-primary transition duration-300", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Github, { className: "size-4 mr-2" }),
-            t2("actions.githubProfile")
-          ] }) }) })
-        ] })
-      ] })
-    ] });
-  }
-
-  // src/components/common/Section.tsx
-  var import_jsx_runtime6 = __toESM(require_jsx_runtime());
-  function Section({ id, title, subtitle, className, children }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { id, className: `mx-auto max-w-6xl px-4 py-10 md:py-14 scroll-mt-20 ${className ?? ""}`, children: [
-      (title || subtitle) && /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("header", { className: "mb-8 relative", children: [
-        title ? /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "h-8 w-1 bg-gradient-to-b from-primary to-purple-600 rounded-full" }),
-          /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h2", { className: "text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-foreground via-foreground/90 to-primary bg-clip-text text-transparent", children: title })
-        ] }) : null,
-        subtitle ? /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-muted-foreground mt-2 max-w-2xl text-sm md:text-base leading-relaxed", children: subtitle }) : null
-      ] }),
-      children
-    ] });
-  }
-
-  // src/components/sections/About.tsx
-  var import_jsx_runtime7 = __toESM(require_jsx_runtime());
-  function About({ location: location2, years }) {
-    const { t: t2 } = useTranslation("common");
-    return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(Section, { id: "about", title: t2("about.title"), children: /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "grid md:grid-cols-[1fr,260px] gap-8 items-start", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("p", { className: "text-muted-foreground leading-relaxed text-base md:text-lg", children: t2("about.paragraph") }),
-      /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("ul", { className: "grid gap-3 p-5 rounded-xl glass-card text-sm", children: [
-        location2 && /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("li", { className: "inline-flex items-center gap-2.5", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(MapPin, { className: "size-4.5 text-primary shrink-0" }),
-          /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("span", { className: "font-medium", children: [
-            t2("about.locatedIn"),
-            " ",
-            location2
-          ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("li", { className: "inline-flex items-center gap-2.5", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(Clock, { className: "size-4.5 text-primary shrink-0" }),
-          /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("span", { className: "font-medium", children: t2("about.yearsExp", { count: years }) })
-        ] })
-      ] })
-    ] }) });
-  }
-
-  // src/components/sections/Skills.tsx
-  var import_jsx_runtime8 = __toESM(require_jsx_runtime());
-  var skills = {
-    frontend: ["React", "Angular", "TypeScript", "Tailwind", "Shadcn UI"],
-    backend: ["Node.js", "Express", "Java", "Spring Boot", "Laravel", "PostgreSQL"],
-    devops: ["Docker", "GitHub Actions", "AWS", "CI/CD"],
-    security: ["Pentesting", "OWASP", "ISO 27001", "Hardening"]
-  };
-  function Skills() {
-    const { t: t2 } = useTranslation("common");
-    return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Section, { id: "skills", title: t2("skills.title"), children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "grid md:grid-cols-2 gap-6", children: Object.entries(skills).map(([key, list]) => /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "rounded-xl glass-card p-5", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h3", { className: "font-semibold text-lg mb-4 text-glow-primary", children: t2(`skills.stacks.${key}`) }),
-      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "flex flex-wrap gap-2", children: list.map((s) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
-        "span",
-        {
-          className: "px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-all duration-300",
-          title: s,
-          children: s
-        },
-        s
-      )) })
-    ] }, key)) }) });
-  }
-
-  // src/components/sections/Services.tsx
-  var import_jsx_runtime9 = __toESM(require_jsx_runtime());
-  function Services() {
-    const { t: t2 } = useTranslation("common");
-    const items4 = [
-      { icon: CodeXml, title: t2("services.items.webapp.title"), desc: t2("services.items.webapp.desc") },
-      { icon: Boxes, title: t2("services.items.backend.title"), desc: t2("services.items.backend.desc") },
-      { icon: Cloud, title: t2("services.items.cloud.title"), desc: t2("services.items.cloud.desc") }
-    ];
-    return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Section, { id: "services", title: t2("services.title"), children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "grid md:grid-cols-3 gap-6", children: items4.map((it) => /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("article", { className: "group rounded-xl glass-card p-6 flex flex-col items-start", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", { className: "p-3 rounded-xl bg-primary/10 mb-4 group-hover:scale-110 transition duration-300", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(it.icon, { className: "size-6 text-primary" }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("h3", { className: "font-semibold text-lg mb-2", children: it.title }),
-      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("p", { className: "text-sm text-muted-foreground leading-relaxed", children: it.desc })
-    ] }, it.title)) }) });
-  }
-
-  // src/components/sections/Experience.tsx
-  var import_jsx_runtime10 = __toESM(require_jsx_runtime());
-  var items = [
-    {
-      company: "Credifac Honduras",
-      roleEs: "Lead Full Stack Architect & Developer",
-      roleEn: "Lead Full Stack Architect & Developer",
-      periodEs: "Abril 2026 \u2014 Actualidad",
-      periodEn: "April 2026 \u2014 Present"
-    },
-    {
-      company: "UNAN-Le\xF3n",
-      roleEs: "Catedr\xE1tico Universitario del \xC1rea de Ingenier\xEDa de Sistemas",
-      roleEn: "University Professor of Systems Engineering",
-      periodEs: "Marzo 2025 \u2014 Actualidad",
-      periodEn: "March 2025 \u2014 Present"
-    },
-    {
-      company: "Universidad Padre Gaspar Garc\xEDa Laviana",
-      roleEs: "Catedr\xE1tico Universitario del \xC1rea de Ingenier\xEDa de Sistemas",
-      roleEn: "University Professor of Systems Engineering",
-      periodEs: "Marzo 2023 \u2014 Junio 2024",
-      periodEn: "March 2023 \u2014 June 2024"
-    },
-    {
-      company: "UNAN-Le\xF3n",
-      roleEs: "Full Stack Tech Lead & Coordinador Tecnol\xF3gico",
-      roleEn: "Full Stack Tech Lead & Technology Coordinator",
-      periodEs: "2021 \u2014 2024",
-      periodEn: "2021 \u2014 2024"
-    },
-    {
-      company: "Universidad Padre Gaspar Garc\xEDa Laviana",
-      roleEs: "Arquitecto de Sistemas & Coordinador de TI",
-      roleEn: "Systems Architect & IT Coordinator",
-      periodEs: "2022 \u2014 2024",
-      periodEn: "2022 \u2014 2024"
-    },
-    {
-      company: "Alcald\xEDa Municipal de Le\xF3n",
-      roleEs: "Senior Full Stack Developer",
-      roleEn: "Senior Full Stack Developer",
-      periodEs: "2020 \u2014 2021",
-      periodEn: "2020 \u2014 2021"
-    }
-  ];
-  function Experience() {
-    const { t: t2, i18n } = useTranslation("common");
-    const isEs = i18n.language.startsWith("es");
-    return /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Section, { id: "experience", title: t2("experience.title"), children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "space-y-4", children: items.map((it, idx) => {
-      const role = isEs ? it.roleEs : it.roleEn;
-      const period = isEs ? it.periodEs : it.periodEn;
-      return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "flex items-start gap-4 glass-card rounded-xl p-5", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "p-2.5 rounded-lg bg-primary/10 text-primary mt-0.5", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Briefcase, { className: "size-5" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h3", { className: "font-semibold text-lg", children: role }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "text-sm font-medium text-primary mt-0.5", children: it.company }),
-          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "text-xs text-muted-foreground mt-1.5", children: period })
-        ] })
-      ] }, idx);
-    }) }) });
-  }
-
-  // src/components/sections/Projects.tsx
-  var import_react14 = __toESM(require_react());
-  var import_jsx_runtime11 = __toESM(require_jsx_runtime());
-  async function fetchRepos(username) {
-    const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`, {
-      headers: { Accept: "application/vnd.github+json" }
-    });
-    if (!res.ok) throw new Error("GitHub API error");
-    const data2 = await res.json();
-    return data2.filter((r2) => !r2.archived);
-  }
-  function RepoCard({ repo, showImg }) {
-    const imgSrc = `https://pub-cdn.sider.ai/u/U09GHALYW1O/web-coder/689be3e3a616cfbf06700a6d/resource/b496038d-4470-4684-af0e-51a462b2d307.jpg`;
-    return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("article", { className: "group rounded-xl overflow-hidden glass-card transition flex flex-col justify-between h-full", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { children: [
-        showImg ? /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "aspect-[16/9] w-full bg-muted overflow-hidden relative", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("img", { src: imgSrc, alt: repo.name, className: "object-cover w-full h-full group-hover:scale-105 transition-all duration-500" }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" })
-        ] }) : /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "aspect-[16/9] w-full bg-muted/30 grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(ImageOff, { className: "size-6 text-muted-foreground" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "p-5", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-start justify-between gap-2", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h4", { className: "font-semibold text-lg tracking-tight group-hover:text-primary transition duration-300", children: repo.name }),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-center gap-2.5 text-xs text-muted-foreground bg-muted/40 px-2 py-1 rounded-md shrink-0", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("span", { className: "inline-flex items-center gap-1", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Star, { className: "size-3.5 text-amber-400" }),
-                " ",
-                repo.stargazers_count
-              ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("span", { className: "inline-flex items-center gap-1", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(GitFork, { className: "size-3.5 text-blue-400" }),
-                " ",
-                repo.forks_count
-              ] })
-            ] })
-          ] }),
-          repo.description ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("p", { className: "mt-2.5 text-sm text-muted-foreground line-clamp-2 leading-relaxed", children: repo.description }) : null
-        ] })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "p-5 pt-0 mt-auto", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-center gap-2 border-t border-border/20 pt-4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("a", { href: repo.html_url, target: "_blank", rel: "noreferrer", className: "flex-1", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Button, { variant: "outline", className: "w-full bg-transparent border-primary/20 hover:border-primary hover:text-primary transition-all duration-300", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Github, { className: "size-4 mr-2" }),
-          "GitHub"
-        ] }) }),
-        repo.homepage ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("a", { href: repo.homepage, target: "_blank", rel: "noreferrer", className: "flex-1", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Button, { variant: "secondary", className: "w-full hover:bg-primary hover:text-primary-foreground transition-all duration-300", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Globe, { className: "size-4 mr-2" }),
-          "Demo"
-        ] }) }) : null,
-        repo.language ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 shrink-0 ml-auto", children: repo.language }) : null
-      ] }) })
-    ] });
-  }
-  function Projects({ username }) {
-    const { t: t2, i18n } = useTranslation("common");
-    const { settings } = useSettings();
-    const [repos, setRepos] = (0, import_react14.useState)(null);
-    const [loading, setLoading] = (0, import_react14.useState)(false);
-    const [error, setError] = (0, import_react14.useState)(null);
-    const [filter, setFilter] = (0, import_react14.useState)("All");
-    (0, import_react14.useEffect)(() => {
-      let mounted = true;
-      setLoading(true);
-      setError(null);
-      fetchRepos(username).then((data2) => mounted && setRepos(data2)).catch((e2) => mounted && setError(e2?.message || "Error")).finally(() => mounted && setLoading(false));
-      return () => {
-        mounted = false;
-      };
-    }, [username]);
-    const languages = (0, import_react14.useMemo)(() => {
-      const set = /* @__PURE__ */ new Set();
-      (repos || []).forEach((r2) => r2.language && set.add(r2.language));
-      return ["All", ...Array.from(set).sort()];
-    }, [repos]);
-    const filtered = (0, import_react14.useMemo)(() => {
-      if (!repos) return [];
-      if (filter === "All") return repos;
-      return repos.filter((r2) => r2.language === filter);
-    }, [repos, filter]);
-    const externalProjects = [
-      {
-        name: "Roma Chess",
-        url: "https://roma-chess.onrender.com/",
-        descEs: "Juego de ajedrez interactivo con integraci\xF3n de Inteligencia Artificial (Stockfish), desarrollado utilizando mi propio framework de backend en Python llamado ROMA Framework (inspirado en Laravel).",
-        descEn: "Interactive chess game with AI integration (Stockfish), built using my custom Python backend framework called ROMA Framework (inspired by Laravel).",
-        tags: ["Python", "ROMA Framework", "Stockfish AI", "WebSockets"],
-        badge: "ROMA Framework"
-      },
-      {
-        name: "Roma Tasks",
-        url: "https://roma-tasks.onrender.com/",
-        descEs: "Administrador de tareas y proyectos construido sobre ROMA Framework en Python, con soporte para autenticaci\xF3n de sesiones, operaciones CRUD y base de datos relacional.",
-        descEn: "Task and project manager built on ROMA Framework in Python, supporting session-based authentication, CRUD operations, and relational database.",
-        tags: ["Python", "ROMA Framework", "SQLite", "MVC"],
-        badge: "ROMA Framework"
-      },
-      {
-        name: "Sistema de Tickets",
-        url: "https://sistema-de-tickets-1.onrender.com/",
-        descEs: "Sistema completo para gesti\xF3n de soporte t\xE9cnico y reporte de tickets, permitiendo la creaci\xF3n de incidencias, asignaci\xF3n de t\xE9cnicos, prioridad y seguimiento en tiempo real.",
-        descEn: "Full-stack helpdesk and ticket management system, enabling ticket creation, agent assignments, priority setting, and real-time status tracking.",
-        tags: ["Node.js", "React", "Express", "MongoDB"],
-        badge: "Full Stack"
-      },
-      {
-        name: "Tetris",
-        url: "https://tetris-jugo.onrender.com",
-        descEs: "Recreaci\xF3n interactiva del cl\xE1sico juego Tetris en el navegador con interfaz minimalista y moderna.",
-        descEn: "Interactive recreation of the classic Tetris game in the browser with a minimalist and modern UI.",
-        tags: ["HTML5 Canvas", "JavaScript", "CSS3"]
-      },
-      {
-        name: "Rick and Morty Portal View",
-        url: "https://rickandmortyportalview.onrender.com",
-        descEs: "Explorador de personajes y episodios de la serie Rick and Morty, conectando de forma fluida con la API oficial.",
-        descEn: "Character and episode explorer for the Rick and Morty show, consuming the official REST API.",
-        tags: ["React", "API REST", "TailwindCSS"]
-      },
-      {
-        name: "PokeAPI",
-        url: "https://pokeapi-u8ik.onrender.com",
-        descEs: "Pok\xE9dex interactiva con estad\xEDsticas detalladas de Pok\xE9mon, buscador y filtrado por tipos en tiempo real.",
-        descEn: "Interactive Pok\xE9dex with detailed Pok\xE9mon stats, search functionality, and real-time type filtering.",
-        tags: ["React", "PokeAPI", "CSS Grid"]
-      },
-      {
-        name: "Chat App",
-        url: "https://chat-app-1-034c.onrender.com",
-        descEs: "Aplicaci\xF3n de chat en tiempo real con salas personalizadas e interfaz de mensajer\xEDa fluida.",
-        descEn: "Real-time chat application featuring custom rooms and a fluid messaging user interface.",
-        tags: ["Node.js", "Socket.io", "React", "Express"]
-      }
-    ];
-    return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Section, { id: "projects", title: t2("projects.title"), children: [
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-center gap-2 text-sm text-muted-foreground", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Funnel, { className: "size-4" }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { children: t2("projects.filterBy", { defaultValue: "Filtrar por lenguaje" }) })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "flex flex-wrap gap-2", children: languages.map((lang) => {
-          const active = filter === lang;
-          return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
-            Button,
-            {
-              size: "sm",
-              variant: active ? "secondary" : "outline",
-              className: active ? "" : "bg-transparent",
-              onClick: () => setFilter(lang),
-              children: lang
-            },
-            lang
-          );
-        }) })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "mt-6", children: loading ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4", children: Array.from({ length: 6 }).map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "animate-pulse rounded-lg border overflow-hidden", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "aspect-[16/9] bg-muted" }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "p-4 space-y-2", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "h-4 w-2/3 bg-muted rounded" }),
-          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "h-3 w-full bg-muted rounded" })
-        ] })
-      ] }, i)) }) : error ? /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "text-sm text-destructive", children: [
-        "GitHub: ",
-        error
-      ] }) : filtered.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("p", { className: "text-sm text-muted-foreground", children: t2("projects.empty") }) : /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4", children: filtered.map((repo) => /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(RepoCard, { repo, showImg: settings.showProjectImages }, repo.id)) }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "mt-12", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h3", { className: "font-semibold tracking-tight text-xl mb-4", children: t2("projects.externalProjects", { defaultValue: "Proyectos Externos" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6", children: externalProjects.map((project, index) => {
-          const isEs = i18n.language.startsWith("es");
-          const desc = isEs ? project.descEs : project.descEn;
-          return /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("article", { className: "group flex flex-col justify-between rounded-xl glass-card p-6 relative overflow-hidden h-full", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-start justify-between gap-3 mb-3", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h4", { className: "font-bold tracking-tight text-lg group-hover:text-primary transition duration-300", children: project.name }),
-                project.badge && /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 shrink-0", children: project.badge })
-              ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("p", { className: "text-sm text-muted-foreground leading-relaxed", children: desc })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "mt-6 pt-4 border-t border-border/20", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "flex flex-wrap gap-1.5 mb-4", children: project.tags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: "text-[10px] font-semibold px-2 py-1 rounded bg-muted/65 text-muted-foreground border border-border/10", children: tag }, tag)) }),
-              /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("a", { href: project.url, target: "_blank", rel: "noreferrer", className: "w-full", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(Button, { variant: "secondary", className: "w-full justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Globe, { className: "size-4 mr-2 animate-pulse" }),
-                "Demo"
-              ] }) }) })
-            ] })
-          ] }, index);
-        }) })
-      ] })
-    ] });
-  }
-
-  // src/components/sections/Certifications.tsx
-  var import_jsx_runtime12 = __toESM(require_jsx_runtime());
-  var items2 = [
-    {
-      nameEs: "M\xE1ster en Seguridad Inform\xE1tica \u2014 Universidad Internacional de La Rioja (UNIR Espa\xF1a)",
-      nameEn: "Master's in Cybersecurity \u2014 International University of La Rioja (UNIR Spain)",
-      year: "2025"
-    },
-    {
-      nameEs: "Liderazgo en la Gesti\xF3n de Proyectos de Software",
-      nameEn: "Leadership in Software Project Management",
-      year: "2026"
-    },
-    {
-      nameEs: "ISO 27001 (Auditor\xEDa y Cumplimiento)",
-      nameEn: "ISO 27001 (Audit & Compliance)",
-      year: "2020"
-    },
-    {
-      nameEs: "Hacking \xC9tico",
-      nameEn: "Ethical Hacking",
-      year: "2020"
-    },
-    {
-      nameEs: "Managed Security",
-      nameEn: "Managed Security",
-      year: "2020"
-    }
-  ];
-  function Certifications() {
-    const { t: t2, i18n } = useTranslation("common");
-    const isEs = i18n.language.startsWith("es");
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Section, { id: "certifications", title: t2("certifications.title"), children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("ul", { className: "grid md:grid-cols-3 gap-6", children: items2.map((c, idx) => {
-      const name = isEs ? c.nameEs : c.nameEn;
-      return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("li", { className: "rounded-xl glass-card p-5 flex items-start gap-4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("div", { className: "p-2.5 rounded-lg bg-primary/10 text-primary mt-0.5", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Award, { className: "size-5" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "font-semibold text-base leading-snug", children: name }),
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("p", { className: "text-xs text-muted-foreground mt-1.5", children: c.year })
-        ] })
-      ] }, idx);
-    }) }) });
-  }
-
-  // src/components/sections/Testimonials.tsx
-  var import_jsx_runtime13 = __toESM(require_jsx_runtime());
-  var items3 = [
-    {
-      quote: "Entrega resultados consistentes y mantiene una comunicaci\xF3n clara con las \xE1reas involucradas.",
-      author: "L\xEDder de Proyecto"
-    },
-    { quote: "Excelente criterio t\xE9cnico y foco en seguridad desde el dise\xF1o.", author: "CTO" }
-  ];
-  function Testimonials() {
-    const { t: t2 } = useTranslation("common");
-    return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Section, { id: "testimonials", title: t2("testimonials.title"), children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)("div", { className: "grid md:grid-cols-2 gap-4", children: items3.map((it, idx) => /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("figure", { className: "rounded-lg border p-4", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(Quote, { className: "size-5 text-primary" }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("blockquote", { className: "mt-2 text-sm text-muted-foreground", children: [
-        "\u201C",
-        it.quote,
-        "\u201D"
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime13.jsxs)("figcaption", { className: "text-xs mt-1", children: [
-        "\u2014 ",
-        it.author
-      ] })
-    ] }, idx)) }) });
-  }
-
   // src/components/sections/GamePortfolio.tsx
-  var import_react16 = __toESM(require_react());
+  var import_react15 = __toESM(require_react());
 
   // src/components/sections/GameModal.tsx
-  var import_react15 = __toESM(require_react());
-  var import_jsx_runtime14 = __toESM(require_jsx_runtime());
+  var import_react14 = __toESM(require_react());
+  var import_jsx_runtime4 = __toESM(require_jsx_runtime());
   function GameModal({ isOpen, onClose, type, title, contentProps }) {
-    (0, import_react15.useEffect)(() => {
+    (0, import_react14.useEffect)(() => {
       if (isOpen) {
         document.body.style.overflow = "hidden";
       } else {
@@ -34802,44 +34116,44 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const handleKeyDown = (e2) => {
       if (e2.key === "Escape") onClose();
     };
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(
       "div",
       {
         className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in",
         onKeyDown: handleKeyDown,
         tabIndex: -1,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%] opacity-40 z-10" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "relative w-full max-w-4xl max-h-[85vh] flex flex-col rounded-xl glass-card overflow-hidden border-primary/40 shadow-[0_0_50px_rgba(var(--primary),0.15)] animate-zoom-in", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex items-center justify-between px-6 py-4 border-b border-primary/20 bg-muted/30", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex items-center gap-2 text-primary", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Terminal, { className: "size-5 animate-pulse" }),
-                /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "font-mono text-xs tracking-widest text-muted-foreground", children: "SYSTEM_CORE //" }),
-                /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("h2", { className: "font-mono text-lg font-bold tracking-tight text-glow-primary uppercase", children: title })
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%] opacity-40 z-10" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "relative w-full max-w-4xl max-h-[85vh] flex flex-col rounded-xl glass-card overflow-hidden border-primary/40 shadow-[0_0_50px_rgba(var(--primary),0.15)] animate-zoom-in", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-center justify-between px-6 py-4 border-b border-primary/20 bg-muted/30", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-center gap-2 text-primary", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Terminal, { className: "size-5 animate-pulse" }),
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "font-mono text-xs tracking-widest text-muted-foreground", children: "SYSTEM_CORE //" }),
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h2", { className: "font-mono text-lg font-bold tracking-tight text-glow-primary uppercase", children: title })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
                 Button,
                 {
                   variant: "ghost",
                   size: "icon",
                   onClick: onClose,
                   className: "hover:bg-primary/20 hover:text-primary transition-all duration-300 text-muted-foreground",
-                  children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(X, { className: "size-5" })
+                  children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(X, { className: "size-5" })
                 }
               )
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex-1 overflow-y-auto p-6 md:p-8 font-sans custom-scrollbar bg-card/40", children: [
-              type === "about" && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(AboutContent, { ...contentProps }),
-              type === "skills" && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(SkillsContent, { ...contentProps }),
-              type === "experience" && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(ExperienceContent, { ...contentProps }),
-              type === "projects" && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(ProjectsContent, { ...contentProps }),
-              type === "certifications" && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(CertificationsContent, { ...contentProps }),
-              type === "contact" && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(ContactContent, { onClose, ...contentProps })
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex-1 overflow-y-auto p-6 md:p-8 font-sans custom-scrollbar bg-card/40", children: [
+              type === "about" && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(AboutContent, { ...contentProps }),
+              type === "skills" && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkillsContent, { ...contentProps }),
+              type === "experience" && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ExperienceContent, { ...contentProps }),
+              type === "projects" && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ProjectsContent, { ...contentProps }),
+              type === "certifications" && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(CertificationsContent, { ...contentProps }),
+              type === "contact" && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ContactContent, { onClose, ...contentProps })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex items-center justify-end px-6 py-3 border-t border-primary/10 bg-muted/10 font-mono text-[10px] text-muted-foreground gap-4", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { children: "STATUS: SECURE_LINK" }),
-              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { children: "SYSTEM: OK" }),
-              /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Button, { size: "sm", variant: "outline", onClick: onClose, className: "border-primary/20 hover:border-primary text-xs h-7", children: "[ESC] CERRAR" })
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-center justify-end px-6 py-3 border-t border-primary/10 bg-muted/10 font-mono text-[10px] text-muted-foreground gap-4", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { children: "STATUS: SECURE_LINK" }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { children: "SYSTEM: OK" }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Button, { size: "sm", variant: "outline", onClick: onClose, className: "border-primary/20 hover:border-primary text-xs h-7", children: "[ESC] CERRAR" })
             ] })
           ] })
         ]
@@ -34847,11 +34161,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     );
   }
   function AboutContent({ name, avatarUrl, location: location2 }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "grid md:grid-cols-[180px_1fr] gap-6 items-start", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex flex-col items-center gap-3", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "size-44 rounded-xl border border-primary/30 p-1.5 bg-muted/40 relative overflow-hidden group shadow-[0_0_20px_rgba(var(--primary),0.1)]", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent z-10 pointer-events-none" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "grid md:grid-cols-[180px_1fr] gap-6 items-start", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex flex-col items-center gap-3", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "size-44 rounded-xl border border-primary/30 p-1.5 bg-muted/40 relative overflow-hidden group shadow-[0_0_20px_rgba(var(--primary),0.1)]", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent z-10 pointer-events-none" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
             "img",
             {
               src: avatarUrl || "https://github.com/Romulomiranda0901.png",
@@ -34860,46 +34174,46 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-[10px] font-mono bg-primary/10 text-primary border border-primary/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider", children: location2 || "Honduras / Nicaragua" })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-[10px] font-mono bg-primary/10 text-primary border border-primary/20 px-2.5 py-0.5 rounded-full uppercase tracking-wider", children: location2 || "Honduras / Nicaragua" })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "space-y-4 font-mono", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "p-4 border border-primary/20 bg-primary/5 rounded-lg", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: "text-primary font-bold text-sm mb-1", children: `> WHOAMI.TXT` }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: "text-sm text-foreground leading-relaxed font-sans", children: "Ingeniero de Software y Arquitecto de Sistemas de \xE9lite, especializado en la creaci\xF3n de plataformas web escalables, de alto rendimiento y con seguridad militar. Con amplia experiencia docente universitaria y desarrollo empresarial, dise\xF1o arquitecturas robustas y optimizo el rendimiento de extremo a extremo, convirtiendo problemas complejos en productos digitales excepcionales, seguros y listos para millones de usuarios." })
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "space-y-4 font-mono", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "p-4 border border-primary/20 bg-primary/5 rounded-lg", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-primary font-bold text-sm mb-1", children: `> WHOAMI.TXT` }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-sm text-foreground leading-relaxed font-sans", children: "Ingeniero de Software y Arquitecto de Sistemas de \xE9lite, especializado en la creaci\xF3n de plataformas web escalables, de alto rendimiento y con seguridad militar. Con amplia experiencia docente universitaria y desarrollo empresarial, dise\xF1o arquitecturas robustas y optimizo el rendimiento de extremo a extremo, convirtiendo problemas complejos en productos digitales excepcionales, seguros y listos para millones de usuarios." })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "grid grid-cols-2 gap-4 text-xs", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "p-3 border border-border/40 rounded-lg bg-muted/10", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-muted-foreground block mb-1", children: "ROL PRINCIPAL" }),
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-foreground font-semibold font-sans", children: "Lead Full Stack Architect" })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "grid grid-cols-2 gap-4 text-xs", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "p-3 border border-border/40 rounded-lg bg-muted/10", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-muted-foreground block mb-1", children: "ROL PRINCIPAL" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-foreground font-semibold font-sans", children: "Lead Full Stack Architect" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "p-3 border border-border/40 rounded-lg bg-muted/10", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-muted-foreground block mb-1", children: "ESPECIALIDAD" }),
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-foreground font-semibold font-sans", children: "Ciberseguridad & Web" })
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "p-3 border border-border/40 rounded-lg bg-muted/10", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-muted-foreground block mb-1", children: "ESPECIALIDAD" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-foreground font-semibold font-sans", children: "Ciberseguridad & Web" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "p-3 border border-border/40 rounded-lg bg-muted/10", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-muted-foreground block mb-1", children: "EXPERIENCIA" }),
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-foreground font-semibold font-sans", children: "4+ A\xF1os Profesional" })
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "p-3 border border-border/40 rounded-lg bg-muted/10", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-muted-foreground block mb-1", children: "EXPERIENCIA" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-foreground font-semibold font-sans", children: "4+ A\xF1os Profesional" })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "p-3 border border-border/40 rounded-lg bg-muted/10", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-muted-foreground block mb-1", children: "PROYECTOS" }),
-            /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-foreground font-semibold font-sans", children: "50+ Repositorios" })
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "p-3 border border-border/40 rounded-lg bg-muted/10", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-muted-foreground block mb-1", children: "PROYECTOS" }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-foreground font-semibold font-sans", children: "50+ Repositorios" })
           ] })
         ] })
       ] })
     ] });
   }
   function SkillsContent() {
-    const skills2 = {
+    const skills = {
       frontend: ["React", "Angular", "TypeScript", "Tailwind", "Shadcn UI"],
       backend: ["Node.js", "Express", "Java", "Spring Boot", "Laravel", "PostgreSQL"],
       devops: ["Docker", "GitHub Actions", "AWS", "CI/CD"],
       security: ["Pentesting", "OWASP", "ISO 27001", "Hardening"]
     };
     const icons = {
-      frontend: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Cpu, { className: "size-4 text-cyan-400" }),
-      backend: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Terminal, { className: "size-4 text-emerald-400" }),
-      devops: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(ArrowRight, { className: "size-4 text-indigo-400" }),
-      security: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(ShieldCheck, { className: "size-4 text-rose-400" })
+      frontend: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Cpu, { className: "size-4 text-cyan-400" }),
+      backend: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Terminal, { className: "size-4 text-emerald-400" }),
+      devops: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ArrowRight, { className: "size-4 text-indigo-400" }),
+      security: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ShieldCheck, { className: "size-4 text-rose-400" })
     };
     const titles = {
       frontend: "Desarrollo Frontend",
@@ -34907,13 +34221,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       devops: "Operaciones e Infraestructura Cloud",
       security: "Seguridad Inform\xE1tica & Pentesting"
     };
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "grid md:grid-cols-2 gap-6", children: Object.entries(skills2).map(([key, list]) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "rounded-lg border border-primary/20 bg-muted/10 p-5 relative overflow-hidden group", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "absolute top-0 right-0 p-3 opacity-20 group-hover:opacity-40 transition-opacity", children: icons[key] }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("h3", { className: "font-mono text-sm font-bold mb-4 flex items-center gap-2 text-primary uppercase", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "grid md:grid-cols-2 gap-6", children: Object.entries(skills).map(([key, list]) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-lg border border-primary/20 bg-muted/10 p-5 relative overflow-hidden group", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "absolute top-0 right-0 p-3 opacity-20 group-hover:opacity-40 transition-opacity", children: icons[key] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h3", { className: "font-mono text-sm font-bold mb-4 flex items-center gap-2 text-primary uppercase", children: [
         icons[key],
         titles[key]
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "flex flex-wrap gap-2", children: list.map((s) => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "flex flex-wrap gap-2", children: list.map((s) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
         "span",
         {
           className: "px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-all duration-300 shadow-[0_0_10px_rgba(var(--primary),0.02)]",
@@ -34924,7 +34238,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ] }, key)) });
   }
   function ExperienceContent() {
-    const items4 = [
+    const items = [
       {
         company: "Credifac Honduras",
         role: "Lead Full Stack Architect & Developer",
@@ -34962,16 +34276,16 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         details: "Desarrollo de m\xF3dulos de catastro municipal y portales web ciudadanos utilizando Laravel, React y PostgreSQL."
       }
     ];
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "space-y-6 max-w-3xl mx-auto", children: items4.map((it, idx) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex gap-4 relative group", children: [
-      idx < items4.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "absolute left-6 top-10 bottom-0 w-0.5 bg-gradient-to-b from-primary/30 to-transparent" }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "flex-shrink-0 size-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-all duration-300 shadow-[0_0_15px_rgba(var(--primary),0.05)]", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Briefcase, { className: "size-5" }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex-1 p-5 rounded-lg border border-border/40 bg-muted/10 group-hover:border-primary/20 transition-all duration-300", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("h3", { className: "font-bold text-base text-glow-primary", children: it.role }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-xs font-mono text-muted-foreground", children: it.period })
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "space-y-6 max-w-3xl mx-auto", children: items.map((it, idx) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex gap-4 relative group", children: [
+      idx < items.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "absolute left-6 top-10 bottom-0 w-0.5 bg-gradient-to-b from-primary/30 to-transparent" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "flex-shrink-0 size-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-all duration-300 shadow-[0_0_15px_rgba(var(--primary),0.05)]", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Briefcase, { className: "size-5" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex-1 p-5 rounded-lg border border-border/40 bg-muted/10 group-hover:border-primary/20 transition-all duration-300", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h3", { className: "font-bold text-base text-glow-primary", children: it.role }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-xs font-mono text-muted-foreground", children: it.period })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: "text-xs font-semibold text-primary/80 mb-2", children: it.company }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: "text-sm text-muted-foreground leading-relaxed font-sans", children: it.details })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-xs font-semibold text-primary/80 mb-2", children: it.company }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-sm text-muted-foreground leading-relaxed font-sans", children: it.details })
       ] })
     ] }, idx)) });
   }
@@ -35020,22 +34334,22 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         badge: "API REST"
       }
     ];
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "grid md:grid-cols-2 gap-6", children: externalProjects.map((project, index) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("article", { className: "group flex flex-col justify-between rounded-lg border border-primary/20 bg-muted/10 p-5 relative overflow-hidden transition-all duration-300 hover:border-primary/40", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "flex items-start justify-between gap-3 mb-3", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("h4", { className: "font-bold tracking-tight text-base group-hover:text-primary transition duration-300", children: project.name }),
-          project.badge && /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-[9px] font-mono font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 shrink-0", children: project.badge })
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "grid md:grid-cols-2 gap-6", children: externalProjects.map((project, index) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("article", { className: "group flex flex-col justify-between rounded-lg border border-primary/20 bg-muted/10 p-5 relative overflow-hidden transition-all duration-300 hover:border-primary/40", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-start justify-between gap-3 mb-3", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h4", { className: "font-bold tracking-tight text-base group-hover:text-primary transition duration-300", children: project.name }),
+          project.badge && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-[9px] font-mono font-semibold tracking-wider uppercase px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20 shrink-0", children: project.badge })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: "text-xs text-muted-foreground leading-relaxed mb-4", children: project.desc })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-xs text-muted-foreground leading-relaxed mb-4", children: project.desc })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "mt-auto pt-3 border-t border-border/10", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "flex flex-wrap gap-1 mb-4", children: project.tags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: "text-[9px] font-mono px-1.5 py-0.5 rounded bg-muted/65 text-muted-foreground border border-border/10", children: tag }, tag)) }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("a", { href: project.url, target: "_blank", rel: "noreferrer", className: "block w-full", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Button, { size: "sm", variant: "secondary", className: "w-full justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-xs h-8", children: "[COMPILAR SIMULACI\xD3N]" }) })
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "mt-auto pt-3 border-t border-border/10", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "flex flex-wrap gap-1 mb-4", children: project.tags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-[9px] font-mono px-1.5 py-0.5 rounded bg-muted/65 text-muted-foreground border border-border/10", children: tag }, tag)) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("a", { href: project.url, target: "_blank", rel: "noreferrer", className: "block w-full", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Button, { size: "sm", variant: "secondary", className: "w-full justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-xs h-8", children: "[COMPILAR SIMULACI\xD3N]" }) })
       ] })
     ] }, index)) });
   }
   function CertificationsContent() {
-    const items4 = [
+    const items = [
       {
         name: "M\xE1ster en Seguridad Inform\xE1tica \u2014 Universidad Internacional de La Rioja (UNIR Espa\xF1a)",
         year: "2025"
@@ -35057,11 +34371,11 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         year: "2020"
       }
     ];
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto", children: items4.map((c, idx) => /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "rounded-lg border border-border/40 bg-muted/10 p-5 flex items-start gap-4 hover:border-primary/20 transition-all duration-300", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "p-2.5 rounded-lg bg-primary/10 text-primary border border-primary/20 mt-0.5", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Award, { className: "size-5" }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("p", { className: "font-semibold text-sm leading-snug", children: c.name }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("p", { className: "text-xs text-muted-foreground mt-2 font-mono", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "grid sm:grid-cols-2 gap-4 max-w-4xl mx-auto", children: items.map((c, idx) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-lg border border-border/40 bg-muted/10 p-5 flex items-start gap-4 hover:border-primary/20 transition-all duration-300", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "p-2.5 rounded-lg bg-primary/10 text-primary border border-primary/20 mt-0.5", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Award, { className: "size-5" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "font-semibold text-sm leading-snug", children: c.name }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("p", { className: "text-xs text-muted-foreground mt-2 font-mono", children: [
           "EMISI\xD3N: ",
           c.year
         ] })
@@ -35074,16 +34388,16 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       alert("Mensaje simulado correctamente. \xA1Gracias por contactar!");
       onClose();
     };
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { className: "max-w-md mx-auto p-6 border border-primary/20 bg-muted/10 rounded-lg relative", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("div", { className: "absolute top-0 right-0 p-3 opacity-20", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Mail, { className: "size-6 text-primary" }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("h3", { className: "font-mono text-sm font-bold mb-4 text-glow-primary text-primary flex items-center gap-2", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Mail, { className: "size-4 animate-pulse" }),
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "max-w-md mx-auto p-6 border border-primary/20 bg-muted/10 rounded-lg relative", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "absolute top-0 right-0 p-3 opacity-20", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Mail, { className: "size-6 text-primary" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h3", { className: "font-mono text-sm font-bold mb-4 text-glow-primary text-primary flex items-center gap-2", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Mail, { className: "size-4 animate-pulse" }),
         `> ENVIAR_MENSAJE.SH`
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("form", { onSubmit: handleSubmit, className: "space-y-4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("label", { className: "block text-[10px] font-mono text-muted-foreground uppercase mb-1", children: "Nombre del Remitente" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("form", { onSubmit: handleSubmit, className: "space-y-4", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "block text-[10px] font-mono text-muted-foreground uppercase mb-1", children: "Nombre del Remitente" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
             "input",
             {
               type: "text",
@@ -35093,9 +34407,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("label", { className: "block text-[10px] font-mono text-muted-foreground uppercase mb-1", children: "Email de Retorno" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "block text-[10px] font-mono text-muted-foreground uppercase mb-1", children: "Email de Retorno" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
             "input",
             {
               type: "email",
@@ -35105,9 +34419,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("label", { className: "block text-[10px] font-mono text-muted-foreground uppercase mb-1", children: "Cuerpo del Mensaje" }),
-          /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "block text-[10px] font-mono text-muted-foreground uppercase mb-1", children: "Cuerpo del Mensaje" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
             "textarea",
             {
               required: true,
@@ -35117,24 +34431,24 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Button, { type: "submit", className: "w-full font-mono text-xs py-5", children: "[TRANSMITIR_MENSAJE]" })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Button, { type: "submit", className: "w-full font-mono text-xs py-5", children: "[TRANSMITIR_MENSAJE]" })
       ] })
     ] });
   }
 
   // src/components/sections/GamePortfolio.tsx
-  var import_jsx_runtime15 = __toESM(require_jsx_runtime());
-  function GamePortfolio({ onExitGameMode, name, avatarUrl, location: location2 }) {
-    const canvasRef = (0, import_react16.useRef)(null);
-    const keysRef = (0, import_react16.useRef)({});
-    const mouseRef = (0, import_react16.useRef)({
+  var import_jsx_runtime5 = __toESM(require_jsx_runtime());
+  function GamePortfolio({ name, avatarUrl, location: location2 }) {
+    const canvasRef = (0, import_react15.useRef)(null);
+    const keysRef = (0, import_react15.useRef)({});
+    const mouseRef = (0, import_react15.useRef)({
       x: 0,
       y: 0,
       isDown: false,
       targetX: null,
       targetY: null
     });
-    const playerRef = (0, import_react16.useRef)({
+    const playerRef = (0, import_react15.useRef)({
       x: 480,
       y: 270,
       vx: 0,
@@ -35146,8 +34460,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       pulseDir: 1,
       floatOffset: 0
     });
-    const particlesRef = (0, import_react16.useRef)([]);
-    const joystickRef = (0, import_react16.useRef)({
+    const particlesRef = (0, import_react15.useRef)([]);
+    const joystickRef = (0, import_react15.useRef)({
       active: false,
       startX: 0,
       startY: 0,
@@ -35155,7 +34469,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       curY: 0,
       radius: 40
     });
-    const nodes = (0, import_react16.useRef)([
+    const nodes = (0, import_react15.useRef)([
       {
         id: "about",
         name: "N\xDACLEO PRINCIPAL",
@@ -35212,7 +34526,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         description: "Canalizar enlace de comunicaci\xF3n directa."
       }
     ]);
-    const skillsList = (0, import_react16.useRef)([
+    const skillsList = (0, import_react15.useRef)([
       { name: "React", category: "frontend", x: 0, y: 0, color: "#22d3ee", collected: false, angle: 0, speed: 0.02, orbitRadius: 60 },
       { name: "TypeScript", category: "frontend", x: 0, y: 0, color: "#3178c6", collected: false, angle: 1.2, speed: 0.015, orbitRadius: 85 },
       { name: "Node.js", category: "backend", x: 0, y: 0, color: "#4ade80", collected: false, angle: 2.4, speed: 0.018, orbitRadius: 65 },
@@ -35220,15 +34534,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       { name: "Docker", category: "devops", x: 0, y: 0, color: "#38bdf8", collected: false, angle: 4.8, speed: 0.022, orbitRadius: 75 },
       { name: "Security", category: "security", x: 0, y: 0, color: "#f43f5e", collected: false, angle: 5.5, speed: 0.014, orbitRadius: 70 }
     ]);
-    const [activeNode, setActiveNode] = (0, import_react16.useState)(null);
-    const [modalOpen, setModalOpen] = (0, import_react16.useState)(false);
-    const [audioEnabled, setAudioEnabled] = (0, import_react16.useState)(false);
-    const [collectedCount, setCollectedCount] = (0, import_react16.useState)(0);
-    const [showTutorial, setShowTutorial] = (0, import_react16.useState)(true);
-    const [isMobile, setIsMobile] = (0, import_react16.useState)(false);
-    const audioCtxRef = (0, import_react16.useRef)(null);
-    const musicOscRef = (0, import_react16.useRef)(null);
-    const musicGainRef = (0, import_react16.useRef)(null);
+    const [activeNode, setActiveNode] = (0, import_react15.useState)(null);
+    const [modalOpen, setModalOpen] = (0, import_react15.useState)(false);
+    const [audioEnabled, setAudioEnabled] = (0, import_react15.useState)(false);
+    const [collectedCount, setCollectedCount] = (0, import_react15.useState)(0);
+    const [showTutorial, setShowTutorial] = (0, import_react15.useState)(true);
+    const [isMobile, setIsMobile] = (0, import_react15.useState)(false);
+    const audioCtxRef = (0, import_react15.useRef)(null);
+    const musicOscRef = (0, import_react15.useRef)(null);
+    const musicGainRef = (0, import_react15.useRef)(null);
     const initAudio = () => {
       if (audioCtxRef.current) return;
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
@@ -35338,7 +34652,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         console.warn(e2);
       }
     };
-    (0, import_react16.useEffect)(() => {
+    (0, import_react15.useEffect)(() => {
       const checkMobile = () => {
         setIsMobile(window.innerWidth < 768 || "ontouchstart" in window);
       };
@@ -35346,7 +34660,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       window.addEventListener("resize", checkMobile);
       return () => window.removeEventListener("resize", checkMobile);
     }, []);
-    (0, import_react16.useEffect)(() => {
+    (0, import_react15.useEffect)(() => {
       const handleKeyDown = (e2) => {
         const targetKeys = ["w", "a", "s", "d", "arrowup", "arrowdown", "arrowleft", "arrowright", " ", "enter"];
         if (targetKeys.includes(e2.key.toLowerCase())) {
@@ -35366,7 +34680,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         window.removeEventListener("keyup", handleKeyUp);
       };
     }, []);
-    (0, import_react16.useEffect)(() => {
+    (0, import_react15.useEffect)(() => {
       const canvas = canvasRef.current;
       if (!canvas) return;
       const ctx = canvas.getContext("2d");
@@ -35376,14 +34690,89 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       const resizeCanvas = () => {
         const container = canvas.parentElement;
         if (!container) return;
-        canvas.width = 960;
-        canvas.height = 540;
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        canvas.width = width;
+        canvas.height = height;
+        if (playerRef.current.x === 480 && playerRef.current.y === 270) {
+          playerRef.current.x = width / 2;
+          playerRef.current.y = height / 2;
+        }
+        const isMobileSize = width < 768;
+        nodes.current = [
+          {
+            id: "about",
+            name: "N\xDACLEO CENTRAL",
+            label: "SOBRE M\xCD",
+            description: "Trayectoria profesional, bio y formaci\xF3n.",
+            color: "#a855f7",
+            // Violeta
+            x: width * 0.5,
+            y: height * (isMobileSize ? 0.22 : 0.28),
+            radius: isMobileSize ? 32 : 40
+          },
+          {
+            id: "skills",
+            name: "N\xDACLEO DE COMPETENCIAS",
+            label: "HABILIDADES",
+            description: "Lenguajes, frameworks y tecnolog\xEDas.",
+            color: "#22c55e",
+            // Verde
+            x: width * (isMobileSize ? 0.22 : 0.18),
+            y: height * (isMobileSize ? 0.5 : 0.65),
+            radius: isMobileSize ? 32 : 40
+          },
+          {
+            id: "experience",
+            name: "REGISTROS DE TRABAJO",
+            label: "EXPERIENCIA",
+            description: "L\xEDnea de tiempo de empleos y roles.",
+            color: "#3b82f6",
+            // Azul
+            x: width * (isMobileSize ? 0.22 : 0.22),
+            y: height * (isMobileSize ? 0.32 : 0.35),
+            radius: isMobileSize ? 32 : 40
+          },
+          {
+            id: "projects",
+            name: "PROYECTOS Y REPOSITORIOS",
+            label: "PROYECTOS",
+            description: "Portafolio de c\xF3digo en GitHub.",
+            color: "#ec4899",
+            // Rosa
+            x: width * (isMobileSize ? 0.78 : 0.78),
+            y: height * (isMobileSize ? 0.32 : 0.35),
+            radius: isMobileSize ? 32 : 40
+          },
+          {
+            id: "certifications",
+            name: "B\xD3VEDA DE CREDENCIALES",
+            label: "CERTIFICADOS",
+            description: "Diplomas y certificaciones acad\xE9micas.",
+            color: "#eab308",
+            // Amarillo
+            x: width * (isMobileSize ? 0.78 : 0.82),
+            y: height * (isMobileSize ? 0.5 : 0.65),
+            radius: isMobileSize ? 32 : 40
+          },
+          {
+            id: "contact",
+            name: "CANAL DE COMUNICACI\xD3N",
+            label: "CONTACTAR",
+            description: "Formulario y enlaces de redes sociales.",
+            color: "#14b8a6",
+            // Teal
+            x: width * 0.5,
+            y: height * (isMobileSize ? 0.78 : 0.82),
+            radius: isMobileSize ? 32 : 40
+          }
+        ];
       };
       resizeCanvas();
       window.addEventListener("resize", resizeCanvas);
       particlesRef.current = Array.from({ length: 40 }, () => ({
-        x: Math.random() * 960,
-        y: Math.random() * 540,
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
         color: `rgba(168, 85, 247, ${Math.random() * 0.3 + 0.1})`,
@@ -35441,8 +34830,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           player.vx = 0;
           mouse.targetX = null;
         }
-        if (player.x > 960 - pad) {
-          player.x = 960 - pad;
+        if (player.x > canvas.width - pad) {
+          player.x = canvas.width - pad;
           player.vx = 0;
           mouse.targetX = null;
         }
@@ -35451,8 +34840,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           player.vy = 0;
           mouse.targetY = null;
         }
-        if (player.y > 540 - pad) {
-          player.y = 540 - pad;
+        if (player.y > canvas.height - pad) {
+          player.y = canvas.height - pad;
           player.vy = 0;
           mouse.targetY = null;
         }
@@ -35478,8 +34867,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         }
         skillsList.current.forEach((skill) => {
           if (skill.collected) return;
-          const coreX = 180;
-          const coreY = 380;
+          const skillsNode = nodes.current.find((n) => n.id === "skills");
+          const coreX = skillsNode ? skillsNode.x : 180;
+          const coreY = skillsNode ? skillsNode.y : 380;
           skill.angle += skill.speed;
           skill.x = coreX + Math.cos(skill.angle) * skill.orbitRadius;
           skill.y = coreY + Math.sin(skill.angle) * skill.orbitRadius;
@@ -35526,8 +34916,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         });
         if (particlesRef.current.length < 30 && Math.random() < 0.1) {
           particlesRef.current.push({
-            x: Math.random() * 960,
-            y: Math.random() * 540,
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
             vx: (Math.random() - 0.5) * 0.3,
             vy: (Math.random() - 0.5) * 0.3,
             color: `rgba(168, 85, 247, ${Math.random() * 0.2 + 0.05})`,
@@ -35538,38 +34928,40 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         }
       };
       const draw = () => {
-        ctx.clearRect(0, 0, 960, 540);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "#05070f";
-        ctx.fillRect(0, 0, 960, 540);
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.strokeStyle = "rgba(139, 92, 246, 0.05)";
         ctx.lineWidth = 1;
         const gridSize = 40;
-        for (let x = 0; x < 960; x += gridSize) {
+        for (let x = 0; x < canvas.width; x += gridSize) {
           ctx.beginPath();
           ctx.moveTo(x, 0);
-          ctx.lineTo(x, 540);
+          ctx.lineTo(x, canvas.height);
           ctx.stroke();
         }
-        for (let y = 0; y < 540; y += gridSize) {
+        for (let y = 0; y < canvas.height; y += gridSize) {
           ctx.beginPath();
           ctx.moveTo(0, y);
-          ctx.lineTo(960, y);
+          ctx.lineTo(canvas.width, y);
           ctx.stroke();
         }
-        ctx.strokeStyle = "rgba(6, 182, 212, 0.06)";
-        ctx.lineWidth = 2;
+        ctx.strokeStyle = "rgba(6, 182, 212, 0.08)";
+        ctx.lineWidth = 1.5;
         ctx.beginPath();
-        ctx.moveTo(180, 160);
-        ctx.lineTo(480, 220);
-        ctx.lineTo(780, 160);
-        ctx.moveTo(180, 380);
-        ctx.lineTo(480, 220);
-        ctx.lineTo(780, 380);
-        ctx.moveTo(480, 220);
-        ctx.lineTo(480, 430);
+        const aboutNode = nodes.current.find((n) => n.id === "about");
+        if (aboutNode) {
+          nodes.current.forEach((node) => {
+            if (node.id !== "about") {
+              ctx.moveTo(aboutNode.x, aboutNode.y);
+              ctx.lineTo(node.x, node.y);
+            }
+          });
+        }
         ctx.stroke();
-        const coreX = 180;
-        const coreY = 380;
+        const skillsNode = nodes.current.find((n) => n.id === "skills");
+        const coreX = skillsNode ? skillsNode.x : 180;
+        const coreY = skillsNode ? skillsNode.y : 380;
         ctx.shadowBlur = 15;
         ctx.shadowColor = "#f43f5e";
         ctx.fillStyle = "rgba(244, 63, 94, 0.1)";
@@ -35730,8 +35122,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       initAudio();
       const clientX = e2.clientX - rect.left;
       const clientY = e2.clientY - rect.top;
-      const x = clientX / rect.width * 960;
-      const y = clientY / rect.height * 540;
+      const x = clientX / rect.width * canvasRef.current.width;
+      const y = clientY / rect.height * canvasRef.current.height;
       let clickedNode = false;
       nodes.current.forEach((node) => {
         const dist = Math.hypot(x - node.x, y - node.y);
@@ -35748,14 +35140,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     };
     const handleTouchStart = (e2) => {
       const rect = canvasRef.current?.getBoundingClientRect();
-      if (!rect) return;
+      if (!rect || !canvasRef.current) return;
       initAudio();
       const touch = e2.targetTouches[0];
       const clientX = touch.clientX - rect.left;
       const clientY = touch.clientY - rect.top;
-      const x = clientX / rect.width * 960;
-      const y = clientY / rect.height * 540;
-      if (x < 480) {
+      const x = clientX / rect.width * canvasRef.current.width;
+      const y = clientY / rect.height * canvasRef.current.height;
+      if (x < canvasRef.current.width * 0.4) {
         joystickRef.current = {
           active: true,
           startX: x,
@@ -35782,12 +35174,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     };
     const handleTouchMove = (e2) => {
       const rect = canvasRef.current?.getBoundingClientRect();
-      if (!rect || !joystickRef.current.active) return;
+      if (!rect || !joystickRef.current.active || !canvasRef.current) return;
       const touch = e2.targetTouches[0];
       const clientX = touch.clientX - rect.left;
       const clientY = touch.clientY - rect.top;
-      const x = clientX / rect.width * 960;
-      const y = clientY / rect.height * 540;
+      const x = clientX / rect.width * canvasRef.current.width;
+      const y = clientY / rect.height * canvasRef.current.height;
       const joystick = joystickRef.current;
       const dx = x - joystick.startX;
       const dy = y - joystick.startY;
@@ -35803,47 +35195,33 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const handleTouchEnd = () => {
       joystickRef.current.active = false;
     };
-    return /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "relative w-full max-w-5xl mx-auto rounded-2xl border border-primary/20 bg-black/60 shadow-[0_0_40px_rgba(0,0,0,0.8)] overflow-hidden no-print", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex items-center justify-between px-6 py-3 border-b border-primary/20 bg-muted/20 font-mono text-xs text-muted-foreground select-none z-20 relative", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("span", { className: "flex items-center gap-1.5 text-cyan-400 font-bold", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "inline-block size-2 rounded-full bg-cyan-400 animate-ping" }),
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "relative w-full h-full flex flex-col bg-black overflow-hidden no-print", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex items-center justify-between px-6 py-3 border-b border-primary/20 bg-muted/20 font-mono text-xs text-muted-foreground select-none z-20 relative shrink-0", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex items-center gap-3", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "flex items-center gap-1.5 text-cyan-400 font-bold", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "inline-block size-2 rounded-full bg-cyan-400 animate-ping" }),
             "CYBER_DRON v2.0"
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("span", { className: "hidden sm:inline border-l border-border/40 pl-3", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "hidden sm:inline border-l border-border/40 pl-3", children: [
             "SISTEMAS DECODIFICADOS: ",
             collectedCount,
             "/6 CHIPS"
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
-            Button,
-            {
-              variant: "ghost",
-              size: "icon",
-              onClick: toggleAudio,
-              className: "hover:bg-primary/20 hover:text-primary transition-all duration-300 text-muted-foreground h-8 w-8",
-              title: "Activar/Desactivar efectos y sintetizador",
-              children: audioEnabled ? /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Volume2, { className: "size-4 text-primary" }) : /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(VolumeX, { className: "size-4" })
-            }
-          ),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)(
-            Button,
-            {
-              size: "sm",
-              onClick: onExitGameMode,
-              className: "font-mono text-xs bg-primary/25 border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(ArrowRightLeft, { className: "size-3.5 mr-2" }),
-                "MODO WEB"
-              ]
-            }
-          )
-        ] })
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "flex items-center gap-3", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
+          Button,
+          {
+            variant: "ghost",
+            size: "icon",
+            onClick: toggleAudio,
+            className: "hover:bg-primary/20 hover:text-primary transition-all duration-300 text-muted-foreground h-8 w-8",
+            title: "Activar/Desactivar efectos y sintetizador",
+            children: audioEnabled ? /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Volume2, { className: "size-4 text-primary" }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(VolumeX, { className: "size-4" })
+          }
+        ) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "relative aspect-[16/9] w-full bg-[#05070f]", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "relative flex-1 bg-[#05070f] overflow-hidden", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           "canvas",
           {
             ref: canvasRef,
@@ -35854,32 +35232,32 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             className: "w-full h-full block cursor-crosshair touch-none"
           }
         ),
-        showTutorial && /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "absolute inset-0 bg-black/80 flex flex-col items-center justify-center p-6 text-center z-30 font-mono transition-all animate-fade-in", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("h3", { className: "text-primary font-bold text-lg mb-3 tracking-widest text-glow-primary", children: "CONEXI\xD3N INICIALIZADA: PORTAFOLIO_V2.BIN" }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("p", { className: "text-xs text-muted-foreground max-w-md mb-6 leading-relaxed", children: "Est\xE1s controlando un dron cibern\xE9tico en la red de Romulo Miranda. Explora el mapa para interactuar con sus servidores de informaci\xF3n y recolectar sus habilidades." }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-4 max-w-xl mb-6 text-left text-[11px] text-foreground", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "border border-primary/20 bg-muted/20 p-3 rounded-lg flex flex-col items-center text-center", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Keyboard, { className: "size-6 text-cyan-400 mb-2" }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "font-bold", children: "TECLADO" }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "text-muted-foreground mt-1", children: "Usa WASD o Flechas para moverte." })
+        showTutorial && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "absolute inset-0 bg-black/80 flex flex-col items-center justify-center p-6 text-center z-30 font-mono transition-all animate-fade-in", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h3", { className: "text-primary font-bold text-lg mb-3 tracking-widest text-glow-primary", children: "CONEXI\xD3N INICIALIZADA: PORTAFOLIO_V2.BIN" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs text-muted-foreground max-w-md mb-6 leading-relaxed", children: "Est\xE1s controlando un dron cibern\xE9tico en la red de Romulo Miranda. Explora el mapa para interactuar con sus servidores de informaci\xF3n y recolectar sus habilidades." }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "grid grid-cols-2 md:grid-cols-4 gap-4 max-w-xl mb-6 text-left text-[11px] text-foreground", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "border border-primary/20 bg-muted/20 p-3 rounded-lg flex flex-col items-center text-center", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Keyboard, { className: "size-6 text-cyan-400 mb-2" }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "font-bold", children: "TECLADO" }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "text-muted-foreground mt-1", children: "Usa WASD o Flechas para moverte." })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "border border-primary/20 bg-muted/20 p-3 rounded-lg flex flex-col items-center text-center", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(MousePointerClick, { className: "size-6 text-pink-400 mb-2" }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "font-bold", children: "CLICK" }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "text-muted-foreground mt-1", children: "Haz click en el mapa para caminar." })
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "border border-primary/20 bg-muted/20 p-3 rounded-lg flex flex-col items-center text-center", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(MousePointerClick, { className: "size-6 text-pink-400 mb-2" }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "font-bold", children: "CLICK" }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "text-muted-foreground mt-1", children: "Haz click en el mapa para caminar." })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "border border-primary/20 bg-muted/20 p-3 rounded-lg flex flex-col items-center text-center", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(Smartphone, { className: "size-6 text-emerald-400 mb-2" }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "font-bold", children: "M\xD3VIL" }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "text-muted-foreground mt-1", children: "Usa el Joystick t\xE1ctil izquierdo." })
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "border border-primary/20 bg-muted/20 p-3 rounded-lg flex flex-col items-center text-center", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Smartphone, { className: "size-6 text-emerald-400 mb-2" }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "font-bold", children: "M\xD3VIL" }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "text-muted-foreground mt-1", children: "Usa el Joystick t\xE1ctil izquierdo." })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "border border-primary/20 bg-muted/20 p-3 rounded-lg flex flex-col items-center text-center", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(CircleHelp, { className: "size-6 text-amber-400 mb-2" }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "font-bold", children: "INTERACTUAR" }),
-              /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "text-muted-foreground mt-1", children: "Ac\xE9rcate a un nodo y pulsa Enter." })
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "border border-primary/20 bg-muted/20 p-3 rounded-lg flex flex-col items-center text-center", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(CircleHelp, { className: "size-6 text-amber-400 mb-2" }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "font-bold", children: "INTERACTUAR" }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "text-muted-foreground mt-1", children: "Ac\xE9rcate a un nodo y pulsa Enter." })
             ] })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
             Button,
             {
               onClick: () => {
@@ -35892,10 +35270,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           )
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "px-6 py-3 border-t border-primary/20 bg-muted/20 font-mono text-[10px] text-muted-foreground flex flex-col sm:flex-row justify-between items-center gap-2 select-none", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex items-center gap-2", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { children: "CHIPS RECOLECTADOS:" }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("div", { className: "flex gap-1.5", children: skillsList.current.map((skill, index) => /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "px-6 py-3 border-t border-primary/20 bg-muted/20 font-mono text-[10px] text-muted-foreground flex flex-col sm:flex-row justify-between items-center gap-2 select-none", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex items-center gap-2", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { children: "CHIPS RECOLECTADOS:" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "flex gap-1.5", children: skillsList.current.map((skill, index) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
             "span",
             {
               className: `px-1.5 py-0.5 rounded border text-[8px] font-bold ${skill.collected ? "bg-cyan-500/10 border-cyan-400 text-cyan-400 animate-pulse" : "bg-muted/10 border-border/40 text-muted-foreground/40"}`,
@@ -35904,12 +35282,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             index
           )) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime15.jsxs)("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { children: "COOPERACI\xD3N: CYBER_LINK EN ESPA\xD1OL/ENGLISH" }),
-          /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("span", { className: "text-primary font-bold", children: "STATUS // LOADED" })
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex items-center gap-3", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { children: "COOPERACI\xD3N: CYBER_LINK EN ESPA\xD1OL/ENGLISH" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "text-primary font-bold", children: "STATUS // LOADED" })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
         GameModal,
         {
           isOpen: modalOpen,
@@ -35948,8 +35326,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
 
   // src/components/settings/SettingsPanel.tsx
-  var import_react17 = __toESM(require_react());
-  var import_jsx_runtime16 = __toESM(require_jsx_runtime());
+  var import_react16 = __toESM(require_react());
+  var import_jsx_runtime6 = __toESM(require_jsx_runtime());
   function RadioItem({
     name,
     value,
@@ -35957,8 +35335,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     label,
     onChange
   }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("label", { className: "flex items-center gap-2 cursor-pointer select-none", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("label", { className: "flex items-center gap-2 cursor-pointer select-none", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
         "input",
         {
           type: "radio",
@@ -35969,7 +35347,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           className: "accent-foreground"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { children: label })
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { children: label })
     ] });
   }
   function CheckItem({
@@ -35977,8 +35355,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     label,
     onChange
   }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("label", { className: "flex items-center gap-2 cursor-pointer select-none", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("label", { className: "flex items-center gap-2 cursor-pointer select-none", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
         "input",
         {
           type: "checkbox",
@@ -35987,7 +35365,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           className: "accent-foreground"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { children: label })
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { children: label })
     ] });
   }
   function AccentSwatch({
@@ -35995,7 +35373,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     selected,
     onSelect
   }) {
-    const style = (0, import_react17.useMemo)(() => {
+    const style = (0, import_react16.useMemo)(() => {
       const map = {
         violet: "from-violet-500 to-fuchsia-500",
         blue: "from-blue-500 to-cyan-500",
@@ -36005,7 +35383,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       };
       return map[accent] ?? "from-zinc-700 to-zinc-500";
     }, [accent]);
-    return /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
       "button",
       {
         type: "button",
@@ -36013,15 +35391,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         className: `relative size-8 rounded-full bg-gradient-to-br ${style} ring-2 transition ${selected ? "ring-primary" : "ring-transparent hover:ring-muted-foreground/30"}`,
         "aria-label": `Acento ${accent}`,
         title: `Acento ${accent}`,
-        children: selected ? /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Check, { className: "absolute inset-0 m-auto size-4 text-white drop-shadow" }) : null
+        children: selected ? /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Check, { className: "absolute inset-0 m-auto size-4 text-white drop-shadow" }) : null
       }
     );
   }
   function SettingsPanel({ open, onClose }) {
     const { settings, update, resolvedTheme, toggleTheme, reset } = useSettings();
     if (!open) return null;
-    return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "no-print", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "no-print", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
         "div",
         {
           className: "fixed inset-0 bg-black/30 backdrop-blur-sm z-50",
@@ -36029,20 +35407,20 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           "aria-hidden": "true"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
         "aside",
         {
           role: "dialog",
           "aria-label": "Panel de configuraci\xF3n",
           className: "fixed right-0 top-0 h-full w-full sm:w-[420px] z-50 bg-background border-l shadow-xl overflow-auto",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("header", { className: "sticky top-0 z-10 border-b bg-background/80 backdrop-blur px-5 py-4 flex items-center justify-between", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "flex items-center gap-2", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Settings, { className: "size-5" }),
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h3", { className: "text-lg font-semibold", children: "Configuraci\xF3n" })
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("header", { className: "sticky top-0 z-10 border-b bg-background/80 backdrop-blur px-5 py-4 flex items-center justify-between", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center gap-2", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Settings, { className: "size-5" }),
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h3", { className: "text-lg font-semibold", children: "Configuraci\xF3n" })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "flex items-center gap-2", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center gap-2", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(
                   Button,
                   {
                     variant: "outline",
@@ -36050,19 +35428,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                     onClick: toggleTheme,
                     title: resolvedTheme === "dark" ? "Pasar a claro" : "Pasar a oscuro",
                     children: [
-                      resolvedTheme === "dark" ? /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Sun, { className: "size-4 mr-2" }) : /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Moon, { className: "size-4 mr-2" }),
+                      resolvedTheme === "dark" ? /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Sun, { className: "size-4 mr-2" }) : /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Moon, { className: "size-4 mr-2" }),
                       "Modo"
                     ]
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Button, { variant: "secondary", onClick: onClose, children: "Cerrar" })
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Button, { variant: "secondary", onClick: onClose, children: "Cerrar" })
               ] })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "px-5 py-6 space-y-8", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("section", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h4", { className: "font-medium mb-3", children: "Tema" }),
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "grid grid-cols-3 gap-3", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "px-5 py-6 space-y-8", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h4", { className: "font-medium mb-3", children: "Tema" }),
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "grid grid-cols-3 gap-3", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "theme",
@@ -36072,7 +35450,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       onChange: (v) => update({ theme: v })
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "theme",
@@ -36082,7 +35460,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       onChange: (v) => update({ theme: v })
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "theme",
@@ -36094,9 +35472,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   )
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("section", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h4", { className: "font-medium mb-3", children: "Color de acento" }),
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("div", { className: "flex items-center gap-3", children: ACCENT_KEYS.map((key) => /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h4", { className: "font-medium mb-3", children: "Color de acento" }),
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "flex items-center gap-3", children: ACCENT_KEYS.map((key) => /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                   AccentSwatch,
                   {
                     accent: key,
@@ -36106,10 +35484,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   key
                 )) })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("section", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h4", { className: "font-medium mb-3", children: "Tama\xF1o base de fuente" }),
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "grid grid-cols-3 gap-3", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h4", { className: "font-medium mb-3", children: "Tama\xF1o base de fuente" }),
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "grid grid-cols-3 gap-3", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "fontScale",
@@ -36119,7 +35497,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       onChange: (v) => update({ fontScale: Number(v) })
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "fontScale",
@@ -36129,7 +35507,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       onChange: (v) => update({ fontScale: Number(v) })
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "fontScale",
@@ -36141,10 +35519,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   )
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("section", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h4", { className: "font-medium mb-3", children: "Curvatura de bordes" }),
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "grid grid-cols-3 gap-3", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h4", { className: "font-medium mb-3", children: "Curvatura de bordes" }),
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "grid grid-cols-3 gap-3", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "radius",
@@ -36154,7 +35532,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       onChange: (v) => update({ radius: v })
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "radius",
@@ -36164,7 +35542,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                       onChange: (v) => update({ radius: v })
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                     RadioItem,
                     {
                       name: "radius",
@@ -36176,9 +35554,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   )
                 ] })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("section", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("h4", { className: "font-medium mb-3", children: "Contenido" }),
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("div", { className: "space-y-2", children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("section", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("h4", { className: "font-medium mb-3", children: "Contenido" }),
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("div", { className: "space-y-2", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
                   CheckItem,
                   {
                     checked: settings.showProjectImages,
@@ -36187,12 +35565,12 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
                   }
                 ) })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("section", { className: "pt-2", children: /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "flex items-center justify-between", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)("div", { className: "flex items-center gap-2 text-sm text-muted-foreground", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(SlidersHorizontal, { className: "size-4" }),
-                  /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { children: "Tus preferencias se guardan en este dispositivo." })
+              /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("section", { className: "pt-2", children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center justify-between", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center gap-2 text-sm text-muted-foreground", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(SlidersHorizontal, { className: "size-4" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("span", { children: "Tus preferencias se guardan en este dispositivo." })
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Button, { variant: "outline", className: "bg-transparent", onClick: reset, children: "Restablecer" })
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Button, { variant: "outline", className: "bg-transparent", onClick: reset, children: "Restablecer" })
               ] }) })
             ] })
           ]
@@ -36201,49 +35579,16 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ] });
   }
 
-  // src/components/layout/ActionBar.tsx
-  var import_jsx_runtime17 = __toESM(require_jsx_runtime());
-  function ActionBar({ email, onPrint }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "no-print fixed bottom-4 right-4 z-40 flex flex-col gap-2", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(Button, { variant: "outline", className: "bg-transparent shadow", onClick: onPrint, title: "Exportar PDF", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Printer, { className: "size-4 mr-2" }),
-        " PDF"
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("a", { href: `mailto:${email}`, title: "Contactar", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(Button, { className: "shadow", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Mail, { className: "size-4 mr-2" }),
-        " Email"
-      ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("a", { href: "#home", title: "Volver arriba", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(Button, { variant: "outline", className: "bg-transparent shadow", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(ArrowUp, { className: "size-4 mr-2" }),
-        " Up"
-      ] }) })
-    ] });
-  }
-
   // src/pages/Home.tsx
-  var import_jsx_runtime18 = __toESM(require_jsx_runtime());
+  var import_jsx_runtime7 = __toESM(require_jsx_runtime());
   var GITHUB_USERNAME = "Romulomiranda0901";
   var EMAIL = "romulomiranda20092009@gmail.com";
   var CV_URL = "Romulo_Miranda_CV_2025.pdf";
   function Home() {
-    const [user, setUser] = (0, import_react18.useState)(null);
-    const [loadingUser, setLoadingUser] = (0, import_react18.useState)(true);
-    const [settingsOpen, setSettingsOpen] = (0, import_react18.useState)(false);
-    const [gameMode, setGameMode] = (0, import_react18.useState)(() => {
-      try {
-        const stored = localStorage.getItem("rm_portfolio_gamemode");
-        return stored !== "false";
-      } catch {
-        return true;
-      }
-    });
-    (0, import_react18.useEffect)(() => {
-      try {
-        localStorage.setItem("rm_portfolio_gamemode", String(gameMode));
-      } catch {
-      }
-    }, [gameMode]);
-    (0, import_react18.useEffect)(() => {
+    const [user, setUser] = (0, import_react17.useState)(null);
+    const [loadingUser, setLoadingUser] = (0, import_react17.useState)(true);
+    const [settingsOpen, setSettingsOpen] = (0, import_react17.useState)(false);
+    (0, import_react17.useEffect)(() => {
       let mounted = true;
       setLoadingUser(true);
       fetchGitHubUser(GITHUB_USERNAME).then((u) => mounted && setUser(u)).finally(() => mounted && setLoadingUser(false));
@@ -36251,93 +35596,46 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         mounted = false;
       };
     }, []);
-    const displayName = (0, import_react18.useMemo)(() => user?.name ?? "Romulo Miranda", [user]);
+    const displayName = (0, import_react17.useMemo)(() => user?.name ?? "Romulo Miranda", [user]);
     function handlePrint() {
       window.print();
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "min-h-screen bg-background text-foreground transition-colors duration-300", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(PrintStyles, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)("div", { className: "min-h-screen bg-background text-foreground transition-colors duration-300", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
         SiteHeader,
         {
           onPrint: handlePrint,
           cvUrl: CV_URL,
           githubUrl: `https://github.com/${GITHUB_USERNAME}`,
           email: EMAIL,
-          onOpenSettings: () => setSettingsOpen(true),
-          gameMode,
-          onToggleGameMode: () => setGameMode(!gameMode)
+          onOpenSettings: () => setSettingsOpen(true)
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("div", { className: "fixed bottom-6 left-6 z-40 no-print", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
-        Button,
-        {
-          onClick: () => setGameMode(!gameMode),
-          className: "shadow-[0_0_20px_rgba(var(--primary),0.35)] font-mono text-xs border border-primary-foreground/15 hover:scale-105 transition-all duration-300 gap-2 h-10 px-4",
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Gamepad2, { className: "size-4 animate-bounce" }),
-            gameMode ? "MODO CL\xC1SICO" : "MODO ARCADE"
-          ]
-        }
-      ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("main", { id: "print-area", className: gameMode ? "py-8 px-4 max-w-6xl mx-auto flex items-center justify-center min-h-[calc(100vh-140px)]" : "", children: gameMode ? /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("main", { className: "w-full h-[calc(100vh-57px)] flex items-stretch justify-stretch overflow-hidden", children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
         GamePortfolio,
         {
-          onExitGameMode: () => setGameMode(false),
           name: displayName,
           avatarUrl: user?.avatar_url,
           location: user?.location
         }
-      ) : /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(import_jsx_runtime18.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
-          Hero,
-          {
-            name: displayName,
-            title: "Senior Software Engineer \u2022 Full Stack \u2022 Ciberseguridad",
-            avatarUrl: user?.avatar_url,
-            cvUrl: CV_URL,
-            githubUrl: `https://github.com/${GITHUB_USERNAME}`
-          }
-        ),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(About, { location: user?.location, years: 4 }),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Skills, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Services, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Experience, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Projects, { username: GITHUB_USERNAME }),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Certifications, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(Testimonials, {})
-      ] }) }),
-      !gameMode && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("footer", { className: "mt-12 border-t py-8 no-print", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("div", { className: "mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)("p", { className: "text-sm text-muted-foreground", children: [
-          "\xA9 ",
-          (/* @__PURE__ */ new Date()).getFullYear(),
-          " ",
-          displayName,
-          ". Todos los derechos reservados."
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("a", { href: "#home", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(Button, { variant: "outline", className: "bg-transparent", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(ArrowUp, { className: "size-4 mr-2" }),
-          "Volver arriba"
-        ] }) })
-      ] }) }),
-      !gameMode && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(ActionBar, { email: EMAIL, onPrint: handlePrint }),
-      /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(SettingsPanel, { open: settingsOpen, onClose: () => setSettingsOpen(false) })
+      ) }),
+      /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(SettingsPanel, { open: settingsOpen, onClose: () => setSettingsOpen(false) })
     ] });
   }
 
   // src/pages/Thanks.tsx
-  var import_jsx_runtime19 = __toESM(require_jsx_runtime());
+  var import_jsx_runtime8 = __toESM(require_jsx_runtime());
   function ThanksPage() {
     const { t: t2 } = useTranslation("common");
-    return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("div", { className: "min-h-screen flex items-center justify-center p-6", children: /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)("div", { className: "max-w-md w-full text-center space-y-4 border rounded-lg p-6", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("h1", { className: "text-2xl font-semibold", children: t2("thanks.title") }),
-      /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("p", { className: "text-muted-foreground", children: t2("thanks.description") }),
-      /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("a", { href: "#home", children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(Button, { children: t2("actions.backHome") }) })
+    return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("div", { className: "min-h-screen flex items-center justify-center p-6", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)("div", { className: "max-w-md w-full text-center space-y-4 border rounded-lg p-6", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("h1", { className: "text-2xl font-semibold", children: t2("thanks.title") }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("p", { className: "text-muted-foreground", children: t2("thanks.description") }),
+      /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("a", { href: "#home", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Button, { children: t2("actions.backHome") }) })
     ] }) });
   }
 
   // src/components/common/Breadcrumbs.tsx
-  var import_jsx_runtime20 = __toESM(require_jsx_runtime());
+  var import_jsx_runtime9 = __toESM(require_jsx_runtime());
   function useCrumbs() {
     const { pathname } = useLocation();
     const clean = pathname.replace(/\/+$/, "") || "/";
@@ -36357,40 +35655,40 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   }
   function Breadcrumbs() {
     const crumbs = useCrumbs();
-    return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("nav", { className: "w-full border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("div", { className: "mx-auto max-w-6xl px-4 py-2 flex items-center gap-2 text-sm text-muted-foreground", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(House, { className: "size-4" }),
+    return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("nav", { className: "w-full border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("div", { className: "mx-auto max-w-6xl px-4 py-2 flex items-center gap-2 text-sm text-muted-foreground", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(House, { className: "size-4" }),
       crumbs.map((c, idx) => {
         const isLast = idx === crumbs.length - 1;
-        return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("span", { className: "flex items-center gap-2", children: [
-          idx > 0 && /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(ChevronRight, { className: "size-3.5 opacity-70" }),
-          c.to && !isLast ? /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(Link, { className: "hover:text-foreground underline underline-offset-2", to: c.to, children: c.label }) : /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("span", { className: "text-foreground", children: c.label })
+        return /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)("span", { className: "flex items-center gap-2", children: [
+          idx > 0 && /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(ChevronRight, { className: "size-3.5 opacity-70" }),
+          c.to && !isLast ? /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(Link, { className: "hover:text-foreground underline underline-offset-2", to: c.to, children: c.label }) : /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: "text-foreground", children: c.label })
         ] }, idx);
       })
     ] }) });
   }
 
   // src/pages/NotFound.tsx
-  var import_jsx_runtime21 = __toESM(require_jsx_runtime());
+  var import_jsx_runtime10 = __toESM(require_jsx_runtime());
   function NotFoundPage() {
     const { t: t2 } = useTranslation("common");
-    return /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { className: "min-h-screen bg-background text-foreground", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(Breadcrumbs, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("main", { className: "mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-2 gap-8 items-center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("h1", { className: "text-3xl md:text-4xl font-bold tracking-tight mb-3", children: t2("notFound.title") }),
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("p", { className: "text-muted-foreground mb-6", children: t2("notFound.description") }),
-          /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(Link, { to: "/", children: /* @__PURE__ */ (0, import_jsx_runtime21.jsxs)(Button, { variant: "outline", className: "bg-transparent", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(ArrowLeft, { className: "size-4 mr-2" }),
+    return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { className: "min-h-screen bg-background text-foreground", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Breadcrumbs, {}),
+      /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("main", { className: "mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-2 gap-8 items-center", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("h1", { className: "text-3xl md:text-4xl font-bold tracking-tight mb-3", children: t2("notFound.title") }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("p", { className: "text-muted-foreground mb-6", children: t2("notFound.description") }),
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Link, { to: "/", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(Button, { variant: "outline", className: "bg-transparent", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(ArrowLeft, { className: "size-4 mr-2" }),
             t2("actions.backHome")
           ] }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime21.jsx)("div", { className: "aspect-video w-full overflow-hidden rounded-lg border bg-muted/30 grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(Compass, { className: "size-16 text-muted-foreground" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("div", { className: "aspect-video w-full overflow-hidden rounded-lg border bg-muted/30 grid place-content-center", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(Compass, { className: "size-16 text-muted-foreground" }) })
       ] })
     ] });
   }
 
   // node_modules/sonner/dist/index.mjs
-  var import_react19 = __toESM(require_react(), 1);
+  var import_react18 = __toESM(require_react(), 1);
   var import_react_dom = __toESM(require_react_dom(), 1);
   function __insertCSS(code) {
     if (!code || typeof document == "undefined") return;
@@ -36416,64 +35714,64 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   };
   var bars = Array(12).fill(0);
   var Loader = ({ visible, className }) => {
-    return /* @__PURE__ */ import_react19.default.createElement("div", {
+    return /* @__PURE__ */ import_react18.default.createElement("div", {
       className: [
         "sonner-loading-wrapper",
         className
       ].filter(Boolean).join(" "),
       "data-visible": visible
-    }, /* @__PURE__ */ import_react19.default.createElement("div", {
+    }, /* @__PURE__ */ import_react18.default.createElement("div", {
       className: "sonner-spinner"
-    }, bars.map((_, i) => /* @__PURE__ */ import_react19.default.createElement("div", {
+    }, bars.map((_, i) => /* @__PURE__ */ import_react18.default.createElement("div", {
       className: "sonner-loading-bar",
       key: `spinner-bar-${i}`
     }))));
   };
-  var SuccessIcon = /* @__PURE__ */ import_react19.default.createElement("svg", {
+  var SuccessIcon = /* @__PURE__ */ import_react18.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20",
     fill: "currentColor",
     height: "20",
     width: "20"
-  }, /* @__PURE__ */ import_react19.default.createElement("path", {
+  }, /* @__PURE__ */ import_react18.default.createElement("path", {
     fillRule: "evenodd",
     d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z",
     clipRule: "evenodd"
   }));
-  var WarningIcon = /* @__PURE__ */ import_react19.default.createElement("svg", {
+  var WarningIcon = /* @__PURE__ */ import_react18.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 24 24",
     fill: "currentColor",
     height: "20",
     width: "20"
-  }, /* @__PURE__ */ import_react19.default.createElement("path", {
+  }, /* @__PURE__ */ import_react18.default.createElement("path", {
     fillRule: "evenodd",
     d: "M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z",
     clipRule: "evenodd"
   }));
-  var InfoIcon = /* @__PURE__ */ import_react19.default.createElement("svg", {
+  var InfoIcon = /* @__PURE__ */ import_react18.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20",
     fill: "currentColor",
     height: "20",
     width: "20"
-  }, /* @__PURE__ */ import_react19.default.createElement("path", {
+  }, /* @__PURE__ */ import_react18.default.createElement("path", {
     fillRule: "evenodd",
     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z",
     clipRule: "evenodd"
   }));
-  var ErrorIcon = /* @__PURE__ */ import_react19.default.createElement("svg", {
+  var ErrorIcon = /* @__PURE__ */ import_react18.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20",
     fill: "currentColor",
     height: "20",
     width: "20"
-  }, /* @__PURE__ */ import_react19.default.createElement("path", {
+  }, /* @__PURE__ */ import_react18.default.createElement("path", {
     fillRule: "evenodd",
     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z",
     clipRule: "evenodd"
   }));
-  var CloseIcon = /* @__PURE__ */ import_react19.default.createElement("svg", {
+  var CloseIcon = /* @__PURE__ */ import_react18.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "12",
     height: "12",
@@ -36483,20 +35781,20 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     strokeWidth: "1.5",
     strokeLinecap: "round",
     strokeLinejoin: "round"
-  }, /* @__PURE__ */ import_react19.default.createElement("line", {
+  }, /* @__PURE__ */ import_react18.default.createElement("line", {
     x1: "18",
     y1: "6",
     x2: "6",
     y2: "18"
-  }), /* @__PURE__ */ import_react19.default.createElement("line", {
+  }), /* @__PURE__ */ import_react18.default.createElement("line", {
     x1: "6",
     y1: "6",
     x2: "18",
     y2: "18"
   }));
   var useIsDocumentHidden = () => {
-    const [isDocumentHidden, setIsDocumentHidden] = import_react19.default.useState(document.hidden);
-    import_react19.default.useEffect(() => {
+    const [isDocumentHidden, setIsDocumentHidden] = import_react18.default.useState(document.hidden);
+    import_react18.default.useEffect(() => {
       const callback = () => {
         setIsDocumentHidden(document.hidden);
       };
@@ -36645,7 +35943,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             "resolve",
             response
           ];
-          const isReactElementResponse = import_react19.default.isValidElement(response);
+          const isReactElementResponse = import_react18.default.isValidElement(response);
           if (isReactElementResponse) {
             shouldDismiss = false;
             this.create({
@@ -36657,7 +35955,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             shouldDismiss = false;
             const promiseData = typeof data2.error === "function" ? await data2.error(`HTTP error! status: ${response.status}`) : data2.error;
             const description = typeof data2.description === "function" ? await data2.description(`HTTP error! status: ${response.status}`) : data2.description;
-            const isExtendedResult = typeof promiseData === "object" && !import_react19.default.isValidElement(promiseData);
+            const isExtendedResult = typeof promiseData === "object" && !import_react18.default.isValidElement(promiseData);
             const toastSettings = isExtendedResult ? promiseData : {
               message: promiseData
             };
@@ -36671,7 +35969,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             shouldDismiss = false;
             const promiseData = typeof data2.error === "function" ? await data2.error(response) : data2.error;
             const description = typeof data2.description === "function" ? await data2.description(response) : data2.description;
-            const isExtendedResult = typeof promiseData === "object" && !import_react19.default.isValidElement(promiseData);
+            const isExtendedResult = typeof promiseData === "object" && !import_react18.default.isValidElement(promiseData);
             const toastSettings = isExtendedResult ? promiseData : {
               message: promiseData
             };
@@ -36685,7 +35983,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             shouldDismiss = false;
             const promiseData = typeof data2.success === "function" ? await data2.success(response) : data2.success;
             const description = typeof data2.description === "function" ? await data2.description(response) : data2.description;
-            const isExtendedResult = typeof promiseData === "object" && !import_react19.default.isValidElement(promiseData);
+            const isExtendedResult = typeof promiseData === "object" && !import_react18.default.isValidElement(promiseData);
             const toastSettings = isExtendedResult ? promiseData : {
               message: promiseData
             };
@@ -36705,7 +36003,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
             shouldDismiss = false;
             const promiseData = typeof data2.error === "function" ? await data2.error(error) : data2.error;
             const description = typeof data2.description === "function" ? await data2.description(error) : data2.description;
-            const isExtendedResult = typeof promiseData === "object" && !import_react19.default.isValidElement(promiseData);
+            const isExtendedResult = typeof promiseData === "object" && !import_react18.default.isValidElement(promiseData);
             const toastSettings = isExtendedResult ? promiseData : {
               message: promiseData
             };
@@ -36734,10 +36032,10 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           });
         }
       };
-      this.custom = (jsx25, data2) => {
+      this.custom = (jsx14, data2) => {
         const id = (data2 == null ? void 0 : data2.id) || toastsCounter++;
         this.create({
-          jsx: jsx25(id),
+          jsx: jsx14(id),
           id,
           ...data2
         });
@@ -36810,45 +36108,45 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   var Toast = (props) => {
     var _toast_classNames, _toast_classNames1, _toast_classNames2, _toast_classNames3, _toast_classNames4, _toast_classNames5, _toast_classNames6, _toast_classNames7, _toast_classNames8;
     const { invert: ToasterInvert, toast: toast2, unstyled, interacting, setHeights, visibleToasts, heights, index, toasts, expanded, removeToast, defaultRichColors, closeButton: closeButtonFromToaster, style, cancelButtonStyle, actionButtonStyle, className = "", descriptionClassName = "", duration: durationFromToaster, position, gap, expandByDefault, classNames, icons, closeButtonAriaLabel = "Close toast" } = props;
-    const [swipeDirection, setSwipeDirection] = import_react19.default.useState(null);
-    const [swipeOutDirection, setSwipeOutDirection] = import_react19.default.useState(null);
-    const [mounted, setMounted] = import_react19.default.useState(false);
-    const [removed, setRemoved] = import_react19.default.useState(false);
-    const [swiping, setSwiping] = import_react19.default.useState(false);
-    const [swipeOut, setSwipeOut] = import_react19.default.useState(false);
-    const [isSwiped, setIsSwiped] = import_react19.default.useState(false);
-    const [offsetBeforeRemove, setOffsetBeforeRemove] = import_react19.default.useState(0);
-    const [initialHeight, setInitialHeight] = import_react19.default.useState(0);
-    const remainingTime = import_react19.default.useRef(toast2.duration || durationFromToaster || TOAST_LIFETIME);
-    const dragStartTime = import_react19.default.useRef(null);
-    const toastRef = import_react19.default.useRef(null);
+    const [swipeDirection, setSwipeDirection] = import_react18.default.useState(null);
+    const [swipeOutDirection, setSwipeOutDirection] = import_react18.default.useState(null);
+    const [mounted, setMounted] = import_react18.default.useState(false);
+    const [removed, setRemoved] = import_react18.default.useState(false);
+    const [swiping, setSwiping] = import_react18.default.useState(false);
+    const [swipeOut, setSwipeOut] = import_react18.default.useState(false);
+    const [isSwiped, setIsSwiped] = import_react18.default.useState(false);
+    const [offsetBeforeRemove, setOffsetBeforeRemove] = import_react18.default.useState(0);
+    const [initialHeight, setInitialHeight] = import_react18.default.useState(0);
+    const remainingTime = import_react18.default.useRef(toast2.duration || durationFromToaster || TOAST_LIFETIME);
+    const dragStartTime = import_react18.default.useRef(null);
+    const toastRef = import_react18.default.useRef(null);
     const isFront = index === 0;
     const isVisible = index + 1 <= visibleToasts;
     const toastType = toast2.type;
     const dismissible = toast2.dismissible !== false;
     const toastClassname = toast2.className || "";
     const toastDescriptionClassname = toast2.descriptionClassName || "";
-    const heightIndex = import_react19.default.useMemo(() => heights.findIndex((height) => height.toastId === toast2.id) || 0, [
+    const heightIndex = import_react18.default.useMemo(() => heights.findIndex((height) => height.toastId === toast2.id) || 0, [
       heights,
       toast2.id
     ]);
-    const closeButton = import_react19.default.useMemo(() => {
+    const closeButton = import_react18.default.useMemo(() => {
       var _toast_closeButton;
       return (_toast_closeButton = toast2.closeButton) != null ? _toast_closeButton : closeButtonFromToaster;
     }, [
       toast2.closeButton,
       closeButtonFromToaster
     ]);
-    const duration = import_react19.default.useMemo(() => toast2.duration || durationFromToaster || TOAST_LIFETIME, [
+    const duration = import_react18.default.useMemo(() => toast2.duration || durationFromToaster || TOAST_LIFETIME, [
       toast2.duration,
       durationFromToaster
     ]);
-    const closeTimerStartTimeRef = import_react19.default.useRef(0);
-    const offset = import_react19.default.useRef(0);
-    const lastCloseTimerStartTimeRef = import_react19.default.useRef(0);
-    const pointerStartRef = import_react19.default.useRef(null);
+    const closeTimerStartTimeRef = import_react18.default.useRef(0);
+    const offset = import_react18.default.useRef(0);
+    const lastCloseTimerStartTimeRef = import_react18.default.useRef(0);
+    const pointerStartRef = import_react18.default.useRef(null);
     const [y, x] = position.split("-");
-    const toastsHeightBefore = import_react19.default.useMemo(() => {
+    const toastsHeightBefore = import_react18.default.useMemo(() => {
       return heights.reduce((prev, curr, reducerIndex) => {
         if (reducerIndex >= heightIndex) {
           return prev;
@@ -36862,19 +36160,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     const isDocumentHidden = useIsDocumentHidden();
     const invert = toast2.invert || ToasterInvert;
     const disabled = toastType === "loading";
-    offset.current = import_react19.default.useMemo(() => heightIndex * gap + toastsHeightBefore, [
+    offset.current = import_react18.default.useMemo(() => heightIndex * gap + toastsHeightBefore, [
       heightIndex,
       toastsHeightBefore
     ]);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       remainingTime.current = duration;
     }, [
       duration
     ]);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       setMounted(true);
     }, []);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       const toastNode = toastRef.current;
       if (toastNode) {
         const height = toastNode.getBoundingClientRect().height;
@@ -36893,7 +36191,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       setHeights,
       toast2.id
     ]);
-    import_react19.default.useLayoutEffect(() => {
+    import_react18.default.useLayoutEffect(() => {
       if (!mounted) return;
       const toastNode = toastRef.current;
       const originalHeight = toastNode.style.height;
@@ -36929,7 +36227,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       toast2.action,
       toast2.cancel
     ]);
-    const deleteToast = import_react19.default.useCallback(() => {
+    const deleteToast = import_react18.default.useCallback(() => {
       setRemoved(true);
       setOffsetBeforeRemove(offset.current);
       setHeights((h) => h.filter((height) => height.toastId !== toast2.id));
@@ -36942,7 +36240,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       setHeights,
       offset
     ]);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       if (toast2.promise && toastType === "loading" || toast2.duration === Infinity || toast2.type === "loading") return;
       let timeoutId;
       const pauseTimer = () => {
@@ -36974,7 +36272,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       isDocumentHidden,
       deleteToast
     ]);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       if (toast2.delete) {
         deleteToast();
         toast2.onDismiss == null ? void 0 : toast2.onDismiss.call(toast2, toast2);
@@ -36987,19 +36285,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       var _toast_classNames9;
       if (icons == null ? void 0 : icons.loading) {
         var _toast_classNames12;
-        return /* @__PURE__ */ import_react19.default.createElement("div", {
+        return /* @__PURE__ */ import_react18.default.createElement("div", {
           className: cn2(classNames == null ? void 0 : classNames.loader, toast2 == null ? void 0 : (_toast_classNames12 = toast2.classNames) == null ? void 0 : _toast_classNames12.loader, "sonner-loader"),
           "data-visible": toastType === "loading"
         }, icons.loading);
       }
-      return /* @__PURE__ */ import_react19.default.createElement(Loader, {
+      return /* @__PURE__ */ import_react18.default.createElement(Loader, {
         className: cn2(classNames == null ? void 0 : classNames.loader, toast2 == null ? void 0 : (_toast_classNames9 = toast2.classNames) == null ? void 0 : _toast_classNames9.loader),
         visible: toastType === "loading"
       });
     }
     const icon = toast2.icon || (icons == null ? void 0 : icons[toastType]) || getAsset(toastType);
     var _toast_richColors, _icons_close;
-    return /* @__PURE__ */ import_react19.default.createElement("li", {
+    return /* @__PURE__ */ import_react18.default.createElement("li", {
       tabIndex: 0,
       ref: toastRef,
       className: cn2(className, toastClassname, classNames == null ? void 0 : classNames.toast, toast2 == null ? void 0 : (_toast_classNames = toast2.classNames) == null ? void 0 : _toast_classNames.toast, classNames == null ? void 0 : classNames.default, classNames == null ? void 0 : classNames[toastType], toast2 == null ? void 0 : (_toast_classNames1 = toast2.classNames) == null ? void 0 : _toast_classNames1[toastType]),
@@ -37124,7 +36422,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         (_toastRef_current = toastRef.current) == null ? void 0 : _toastRef_current.style.setProperty("--swipe-amount-x", `${swipeAmount.x}px`);
         (_toastRef_current1 = toastRef.current) == null ? void 0 : _toastRef_current1.style.setProperty("--swipe-amount-y", `${swipeAmount.y}px`);
       }
-    }, closeButton && !toast2.jsx && toastType !== "loading" ? /* @__PURE__ */ import_react19.default.createElement("button", {
+    }, closeButton && !toast2.jsx && toastType !== "loading" ? /* @__PURE__ */ import_react18.default.createElement("button", {
       "aria-label": closeButtonAriaLabel,
       "data-disabled": disabled,
       "data-close-button": true,
@@ -37134,19 +36432,19 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         toast2.onDismiss == null ? void 0 : toast2.onDismiss.call(toast2, toast2);
       },
       className: cn2(classNames == null ? void 0 : classNames.closeButton, toast2 == null ? void 0 : (_toast_classNames2 = toast2.classNames) == null ? void 0 : _toast_classNames2.closeButton)
-    }, (_icons_close = icons == null ? void 0 : icons.close) != null ? _icons_close : CloseIcon) : null, (toastType || toast2.icon || toast2.promise) && toast2.icon !== null && ((icons == null ? void 0 : icons[toastType]) !== null || toast2.icon) ? /* @__PURE__ */ import_react19.default.createElement("div", {
+    }, (_icons_close = icons == null ? void 0 : icons.close) != null ? _icons_close : CloseIcon) : null, (toastType || toast2.icon || toast2.promise) && toast2.icon !== null && ((icons == null ? void 0 : icons[toastType]) !== null || toast2.icon) ? /* @__PURE__ */ import_react18.default.createElement("div", {
       "data-icon": "",
       className: cn2(classNames == null ? void 0 : classNames.icon, toast2 == null ? void 0 : (_toast_classNames3 = toast2.classNames) == null ? void 0 : _toast_classNames3.icon)
-    }, toast2.promise || toast2.type === "loading" && !toast2.icon ? toast2.icon || getLoadingIcon() : null, toast2.type !== "loading" ? icon : null) : null, /* @__PURE__ */ import_react19.default.createElement("div", {
+    }, toast2.promise || toast2.type === "loading" && !toast2.icon ? toast2.icon || getLoadingIcon() : null, toast2.type !== "loading" ? icon : null) : null, /* @__PURE__ */ import_react18.default.createElement("div", {
       "data-content": "",
       className: cn2(classNames == null ? void 0 : classNames.content, toast2 == null ? void 0 : (_toast_classNames4 = toast2.classNames) == null ? void 0 : _toast_classNames4.content)
-    }, /* @__PURE__ */ import_react19.default.createElement("div", {
+    }, /* @__PURE__ */ import_react18.default.createElement("div", {
       "data-title": "",
       className: cn2(classNames == null ? void 0 : classNames.title, toast2 == null ? void 0 : (_toast_classNames5 = toast2.classNames) == null ? void 0 : _toast_classNames5.title)
-    }, toast2.jsx ? toast2.jsx : typeof toast2.title === "function" ? toast2.title() : toast2.title), toast2.description ? /* @__PURE__ */ import_react19.default.createElement("div", {
+    }, toast2.jsx ? toast2.jsx : typeof toast2.title === "function" ? toast2.title() : toast2.title), toast2.description ? /* @__PURE__ */ import_react18.default.createElement("div", {
       "data-description": "",
       className: cn2(descriptionClassName, toastDescriptionClassname, classNames == null ? void 0 : classNames.description, toast2 == null ? void 0 : (_toast_classNames6 = toast2.classNames) == null ? void 0 : _toast_classNames6.description)
-    }, typeof toast2.description === "function" ? toast2.description() : toast2.description) : null), /* @__PURE__ */ import_react19.default.isValidElement(toast2.cancel) ? toast2.cancel : toast2.cancel && isAction(toast2.cancel) ? /* @__PURE__ */ import_react19.default.createElement("button", {
+    }, typeof toast2.description === "function" ? toast2.description() : toast2.description) : null), /* @__PURE__ */ import_react18.default.isValidElement(toast2.cancel) ? toast2.cancel : toast2.cancel && isAction(toast2.cancel) ? /* @__PURE__ */ import_react18.default.createElement("button", {
       "data-button": true,
       "data-cancel": true,
       style: toast2.cancelButtonStyle || cancelButtonStyle,
@@ -37157,7 +36455,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         deleteToast();
       },
       className: cn2(classNames == null ? void 0 : classNames.cancelButton, toast2 == null ? void 0 : (_toast_classNames7 = toast2.classNames) == null ? void 0 : _toast_classNames7.cancelButton)
-    }, toast2.cancel.label) : null, /* @__PURE__ */ import_react19.default.isValidElement(toast2.action) ? toast2.action : toast2.action && isAction(toast2.action) ? /* @__PURE__ */ import_react19.default.createElement("button", {
+    }, toast2.cancel.label) : null, /* @__PURE__ */ import_react18.default.isValidElement(toast2.action) ? toast2.action : toast2.action && isAction(toast2.action) ? /* @__PURE__ */ import_react18.default.createElement("button", {
       "data-button": true,
       "data-action": true,
       style: toast2.actionButtonStyle || actionButtonStyle,
@@ -37219,13 +36517,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     });
     return styles;
   }
-  var Toaster = /* @__PURE__ */ import_react19.default.forwardRef(function Toaster2(props, ref) {
+  var Toaster = /* @__PURE__ */ import_react18.default.forwardRef(function Toaster2(props, ref) {
     const { id, invert, position = "bottom-right", hotkey = [
       "altKey",
       "KeyT"
     ], expand, closeButton, className, offset, mobileOffset, theme = "light", richColors, duration, style, visibleToasts = VISIBLE_TOASTS_AMOUNT, toastOptions, dir: dir2 = getDocumentDirection(), gap = GAP, icons, containerAriaLabel = "Notifications" } = props;
-    const [toasts, setToasts] = import_react19.default.useState([]);
-    const filteredToasts = import_react19.default.useMemo(() => {
+    const [toasts, setToasts] = import_react18.default.useState([]);
+    const filteredToasts = import_react18.default.useMemo(() => {
       if (id) {
         return toasts.filter((toast2) => toast2.toasterId === id);
       }
@@ -37234,7 +36532,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       toasts,
       id
     ]);
-    const possiblePositions = import_react19.default.useMemo(() => {
+    const possiblePositions = import_react18.default.useMemo(() => {
       return Array.from(new Set([
         position
       ].concat(filteredToasts.filter((toast2) => toast2.position).map((toast2) => toast2.position))));
@@ -37242,15 +36540,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       filteredToasts,
       position
     ]);
-    const [heights, setHeights] = import_react19.default.useState([]);
-    const [expanded, setExpanded] = import_react19.default.useState(false);
-    const [interacting, setInteracting] = import_react19.default.useState(false);
-    const [actualTheme, setActualTheme] = import_react19.default.useState(theme !== "system" ? theme : typeof window !== "undefined" ? window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light" : "light");
-    const listRef = import_react19.default.useRef(null);
+    const [heights, setHeights] = import_react18.default.useState([]);
+    const [expanded, setExpanded] = import_react18.default.useState(false);
+    const [interacting, setInteracting] = import_react18.default.useState(false);
+    const [actualTheme, setActualTheme] = import_react18.default.useState(theme !== "system" ? theme : typeof window !== "undefined" ? window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light" : "light");
+    const listRef = import_react18.default.useRef(null);
     const hotkeyLabel = hotkey.join("+").replace(/Key/g, "").replace(/Digit/g, "");
-    const lastFocusedElementRef = import_react19.default.useRef(null);
-    const isFocusWithinRef = import_react19.default.useRef(false);
-    const removeToast = import_react19.default.useCallback((toastToRemove) => {
+    const lastFocusedElementRef = import_react18.default.useRef(null);
+    const isFocusWithinRef = import_react18.default.useRef(false);
+    const removeToast = import_react18.default.useCallback((toastToRemove) => {
       setToasts((toasts2) => {
         var _toasts_find;
         if (!((_toasts_find = toasts2.find((toast2) => toast2.id === toastToRemove.id)) == null ? void 0 : _toasts_find.delete)) {
@@ -37259,7 +36557,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         return toasts2.filter(({ id: id2 }) => id2 !== toastToRemove.id);
       });
     }, []);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       return ToastState.subscribe((toast2) => {
         if (toast2.dismiss) {
           requestAnimationFrame(() => {
@@ -37295,7 +36593,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }, [
       toasts
     ]);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       if (theme !== "system") {
         setActualTheme(theme);
         return;
@@ -37333,14 +36631,14 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }, [
       theme
     ]);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       if (toasts.length <= 1) {
         setExpanded(false);
       }
     }, [
       toasts
     ]);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       const handleKeyDown = (event) => {
         var _listRef_current;
         const isHotkeyPressed = hotkey.every((key) => event[key] || event.code === key);
@@ -37358,7 +36656,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }, [
       hotkey
     ]);
-    import_react19.default.useEffect(() => {
+    import_react18.default.useEffect(() => {
       if (listRef.current) {
         return () => {
           if (lastFocusedElementRef.current) {
@@ -37375,7 +36673,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     ]);
     return (
       // Remove item from normal navigation flow, only available via hotkey
-      /* @__PURE__ */ import_react19.default.createElement("section", {
+      /* @__PURE__ */ import_react18.default.createElement("section", {
         ref,
         "aria-label": `${containerAriaLabel} ${hotkeyLabel}`,
         tabIndex: -1,
@@ -37387,7 +36685,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         var _heights_;
         const [y, x] = position2.split("-");
         if (!filteredToasts.length) return null;
-        return /* @__PURE__ */ import_react19.default.createElement("ol", {
+        return /* @__PURE__ */ import_react18.default.createElement("ol", {
           key: position2,
           dir: dir2 === "auto" ? getDocumentDirection() : dir2,
           tabIndex: -1,
@@ -37439,7 +36737,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           onPointerUp: () => setInteracting(false)
         }, filteredToasts.filter((toast2) => !toast2.position && index === 0 || toast2.position === position2).map((toast2, index2) => {
           var _toastOptions_duration, _toastOptions_closeButton;
-          return /* @__PURE__ */ import_react19.default.createElement(Toast, {
+          return /* @__PURE__ */ import_react18.default.createElement(Toast, {
             key: toast2.id,
             icons,
             index: index2,
@@ -37474,9 +36772,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   });
 
   // src/components/common/ErrorBoundary.tsx
-  var import_react20 = __toESM(require_react());
-  var import_jsx_runtime22 = __toESM(require_jsx_runtime());
-  var ErrorBoundary = class extends import_react20.default.Component {
+  var import_react19 = __toESM(require_react());
+  var import_jsx_runtime11 = __toESM(require_jsx_runtime());
+  var ErrorBoundary = class extends import_react19.default.Component {
     constructor(props) {
       super(props);
       /** Restablece el estado para reintentar render */
@@ -37497,13 +36795,13 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
     }
     render() {
       if (this.state.hasError) {
-        return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "min-h-screen flex items-center justify-center p-6", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "max-w-md w-full text-center space-y-4 border rounded-lg p-6", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("h2", { className: "text-xl font-semibold", children: "Ha ocurrido un error" }),
-          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("p", { className: "text-sm text-muted-foreground", children: "Intentaremos recuperarnos. Si el problema persiste, recarga la p\xE1gina." }),
-          /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "text-left bg-muted/50 rounded-md p-3 overflow-auto max-h-40", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("pre", { className: "text-xs whitespace-pre-wrap", children: this.state.error?.message }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)("div", { className: "flex items-center justify-center gap-2", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Button, { onClick: this.handleRetry, children: "Reintentar" }),
-            /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(Button, { variant: "outline", className: "bg-transparent", onClick: () => location.reload(), children: "Recargar" })
+        return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "min-h-screen flex items-center justify-center p-6", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "max-w-md w-full text-center space-y-4 border rounded-lg p-6", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("h2", { className: "text-xl font-semibold", children: "Ha ocurrido un error" }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("p", { className: "text-sm text-muted-foreground", children: "Intentaremos recuperarnos. Si el problema persiste, recarga la p\xE1gina." }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("div", { className: "text-left bg-muted/50 rounded-md p-3 overflow-auto max-h-40", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("pre", { className: "text-xs whitespace-pre-wrap", children: this.state.error?.message }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)("div", { className: "flex items-center justify-center gap-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Button, { onClick: this.handleRetry, children: "Reintentar" }),
+            /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(Button, { variant: "outline", className: "bg-transparent", onClick: () => location.reload(), children: "Recargar" })
           ] })
         ] }) });
       }
@@ -37512,22 +36810,22 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
   };
 
   // src/App.tsx
-  var import_jsx_runtime23 = __toESM(require_jsx_runtime());
+  var import_jsx_runtime12 = __toESM(require_jsx_runtime());
   function App() {
-    return /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)(SettingsProvider, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Toaster, { position: "top-right", richColors: true, theme: "system" }),
-      /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(ErrorBoundary, { children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(MemoryRouter, { initialEntries: ["/"], children: /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)(Routes, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Home, {}) }),
-        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Route, { path: "/thanks", element: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(ThanksPage, {}) }),
-        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(Route, { path: "*", element: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(NotFoundPage, {}) })
+    return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(SettingsProvider, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Toaster, { position: "top-right", richColors: true, theme: "system" }),
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(ErrorBoundary, { children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(MemoryRouter, { initialEntries: ["/"], children: /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(Routes, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Home, {}) }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Route, { path: "/thanks", element: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(ThanksPage, {}) }),
+        /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Route, { path: "*", element: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(NotFoundPage, {}) })
       ] }) }) })
     ] });
   }
 
   // src/main.tsx
-  var import_jsx_runtime24 = __toESM(require_jsx_runtime());
+  var import_jsx_runtime13 = __toESM(require_jsx_runtime());
   var root = (0, import_client.createRoot)(document.getElementById("app"));
-  root.render(/* @__PURE__ */ (0, import_jsx_runtime24.jsx)(App, {}));
+  root.render(/* @__PURE__ */ (0, import_jsx_runtime13.jsx)(App, {}));
 })();
 /*! Bundled license information:
 
@@ -37606,41 +36904,25 @@ lucide-react/dist/esm/defaultAttributes.js:
 lucide-react/dist/esm/Icon.js:
 lucide-react/dist/esm/createLucideIcon.js:
 lucide-react/dist/esm/icons/arrow-left.js:
-lucide-react/dist/esm/icons/arrow-right-left.js:
 lucide-react/dist/esm/icons/arrow-right.js:
-lucide-react/dist/esm/icons/arrow-up.js:
 lucide-react/dist/esm/icons/award.js:
-lucide-react/dist/esm/icons/boxes.js:
 lucide-react/dist/esm/icons/briefcase.js:
 lucide-react/dist/esm/icons/check.js:
 lucide-react/dist/esm/icons/chevron-right.js:
 lucide-react/dist/esm/icons/circle-help.js:
-lucide-react/dist/esm/icons/clock.js:
-lucide-react/dist/esm/icons/cloud.js:
-lucide-react/dist/esm/icons/code-xml.js:
 lucide-react/dist/esm/icons/compass.js:
 lucide-react/dist/esm/icons/cpu.js:
-lucide-react/dist/esm/icons/funnel.js:
-lucide-react/dist/esm/icons/gamepad-2.js:
-lucide-react/dist/esm/icons/git-fork.js:
-lucide-react/dist/esm/icons/github.js:
-lucide-react/dist/esm/icons/globe.js:
 lucide-react/dist/esm/icons/house.js:
-lucide-react/dist/esm/icons/image-off.js:
 lucide-react/dist/esm/icons/keyboard.js:
 lucide-react/dist/esm/icons/languages.js:
 lucide-react/dist/esm/icons/mail.js:
-lucide-react/dist/esm/icons/map-pin.js:
 lucide-react/dist/esm/icons/moon.js:
 lucide-react/dist/esm/icons/mouse-pointer-click.js:
 lucide-react/dist/esm/icons/palette.js:
-lucide-react/dist/esm/icons/printer.js:
-lucide-react/dist/esm/icons/quote.js:
 lucide-react/dist/esm/icons/settings.js:
 lucide-react/dist/esm/icons/shield-check.js:
 lucide-react/dist/esm/icons/sliders-horizontal.js:
 lucide-react/dist/esm/icons/smartphone.js:
-lucide-react/dist/esm/icons/star.js:
 lucide-react/dist/esm/icons/sun.js:
 lucide-react/dist/esm/icons/terminal.js:
 lucide-react/dist/esm/icons/volume-2.js:

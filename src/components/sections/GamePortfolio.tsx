@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { Volume2, VolumeX, Keyboard, HelpCircle, ArrowRightLeft, MousePointerClick, Smartphone } from 'lucide-react'
+import { Volume2, VolumeX, Keyboard, HelpCircle, MousePointerClick, Smartphone } from 'lucide-react'
 import GameModal from './GameModal'
 import { Button } from '../ui/button'
 
 interface GamePortfolioProps {
-  onExitGameMode: () => void
   name: string
   avatarUrl?: string
   location?: string
@@ -45,7 +44,7 @@ interface SkillNode {
   orbitRadius: number
 }
 
-export default function GamePortfolio({ onExitGameMode, name, avatarUrl, location }: GamePortfolioProps) {
+export default function GamePortfolio({ name, avatarUrl, location }: GamePortfolioProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   
   // Referencias para el bucle de juego y estado de entrada
@@ -341,20 +340,95 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
     let animFrameId: number
     let floatTime = 0
 
-    // Asegurar tamaño físico y lógico del Canvas
+    // Asegurar tamaño físico y lógico del Canvas de forma dinámica y responsiva
     const resizeCanvas = () => {
       const container = canvas.parentElement
       if (!container) return
-      canvas.width = 960
-      canvas.height = 540
+      const width = container.clientWidth
+      const height = container.clientHeight
+      
+      canvas.width = width
+      canvas.height = height
+
+      // Centrar jugador si está en su posición por defecto de inicio
+      if (playerRef.current.x === 480 && playerRef.current.y === 270) {
+        playerRef.current.x = width / 2
+        playerRef.current.y = height / 2
+      }
+
+      // Re-distribuir los nodos interactivos de forma responsiva y adaptada al dispositivo
+      const isMobileSize = width < 768
+      
+      nodes.current = [
+        {
+          id: 'about',
+          name: 'NÚCLEO CENTRAL',
+          label: 'SOBRE MÍ',
+          description: 'Trayectoria profesional, bio y formación.',
+          color: '#a855f7', // Violeta
+          x: width * 0.5,
+          y: height * (isMobileSize ? 0.22 : 0.28),
+          radius: isMobileSize ? 32 : 40,
+        },
+        {
+          id: 'skills',
+          name: 'NÚCLEO DE COMPETENCIAS',
+          label: 'HABILIDADES',
+          description: 'Lenguajes, frameworks y tecnologías.',
+          color: '#22c55e', // Verde
+          x: width * (isMobileSize ? 0.22 : 0.18),
+          y: height * (isMobileSize ? 0.50 : 0.65),
+          radius: isMobileSize ? 32 : 40,
+        },
+        {
+          id: 'experience',
+          name: 'REGISTROS DE TRABAJO',
+          label: 'EXPERIENCIA',
+          description: 'Línea de tiempo de empleos y roles.',
+          color: '#3b82f6', // Azul
+          x: width * (isMobileSize ? 0.22 : 0.22),
+          y: height * (isMobileSize ? 0.32 : 0.35),
+          radius: isMobileSize ? 32 : 40,
+        },
+        {
+          id: 'projects',
+          name: 'PROYECTOS Y REPOSITORIOS',
+          label: 'PROYECTOS',
+          description: 'Portafolio de código en GitHub.',
+          color: '#ec4899', // Rosa
+          x: width * (isMobileSize ? 0.78 : 0.78),
+          y: height * (isMobileSize ? 0.32 : 0.35),
+          radius: isMobileSize ? 32 : 40,
+        },
+        {
+          id: 'certifications',
+          name: 'BÓVEDA DE CREDENCIALES',
+          label: 'CERTIFICADOS',
+          description: 'Diplomas y certificaciones académicas.',
+          color: '#eab308', // Amarillo
+          x: width * (isMobileSize ? 0.78 : 0.82),
+          y: height * (isMobileSize ? 0.50 : 0.65),
+          radius: isMobileSize ? 32 : 40,
+        },
+        {
+          id: 'contact',
+          name: 'CANAL DE COMUNICACIÓN',
+          label: 'CONTACTAR',
+          description: 'Formulario y enlaces de redes sociales.',
+          color: '#14b8a6', // Teal
+          x: width * 0.5,
+          y: height * (isMobileSize ? 0.78 : 0.82),
+          radius: isMobileSize ? 32 : 40,
+        },
+      ]
     }
     resizeCanvas()
     window.addEventListener('resize', resizeCanvas)
 
-    // Crear partículas ambientales iniciales
+    // Crear partículas ambientales iniciales usando dimensiones reales
     particlesRef.current = Array.from({ length: 40 }, () => ({
-      x: Math.random() * 960,
-      y: Math.random() * 540,
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * 0.4,
       vy: (Math.random() - 0.5) * 0.4,
       color: `rgba(168, 85, 247, ${Math.random() * 0.3 + 0.1})`,
@@ -425,12 +499,12 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
       player.x += player.vx
       player.y += player.vy
 
-      // Límites del mapa y colisiones perimetrales
+      // Límites del mapa y colisiones perimetrales ajustados al Canvas dinámico
       const pad = player.radius + 15
       if (player.x < pad) { player.x = pad; player.vx = 0; mouse.targetX = null }
-      if (player.x > 960 - pad) { player.x = 960 - pad; player.vx = 0; mouse.targetX = null }
+      if (player.x > canvas.width - pad) { player.x = canvas.width - pad; player.vx = 0; mouse.targetX = null }
       if (player.y < pad) { player.y = pad; player.vy = 0; mouse.targetY = null }
-      if (player.y > 540 - pad) { player.y = 540 - pad; player.vy = 0; mouse.targetY = null }
+      if (player.y > canvas.height - pad) { player.y = canvas.height - pad; player.vy = 0; mouse.targetY = null }
 
       // Pulsar brillo del jugador
       player.glow += player.pulseDir * 0.3
@@ -459,9 +533,10 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
       skillsList.current.forEach((skill) => {
         if (skill.collected) return
 
-        // Orbitar alrededor de una posición específica del mapa (Skills Core, cerca del top-izq: 180, 380)
-        const coreX = 180
-        const coreY = 380
+        // Orbitar alrededor de la posición del nodo de habilidades actual
+        const skillsNode = nodes.current.find(n => n.id === 'skills')
+        const coreX = skillsNode ? skillsNode.x : 180
+        const coreY = skillsNode ? skillsNode.y : 380
         skill.angle += skill.speed
         skill.x = coreX + Math.cos(skill.angle) * skill.orbitRadius
         skill.y = coreY + Math.sin(skill.angle) * skill.orbitRadius
@@ -520,8 +595,8 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
       // Añadir partículas ambientales aleatorias si bajan de 30
       if (particlesRef.current.length < 30 && Math.random() < 0.1) {
         particlesRef.current.push({
-          x: Math.random() * 960,
-          y: Math.random() * 540,
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 0.3,
           vy: (Math.random() - 0.5) * 0.3,
           color: `rgba(168, 85, 247, ${Math.random() * 0.2 + 0.05})`,
@@ -534,46 +609,48 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
 
     // FUNCIÓN DE DIBUJO DEL RENDER
     const draw = () => {
-      ctx.clearRect(0, 0, 960, 540)
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       // A. FONDO CYBERPUNK - Rejilla retro neón
       ctx.fillStyle = '#05070f'
-      ctx.fillRect(0, 0, 960, 540)
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       // Rejilla de perspectiva electrónica en el fondo
       ctx.strokeStyle = 'rgba(139, 92, 246, 0.05)'
       ctx.lineWidth = 1
       const gridSize = 40
-      for (let x = 0; x < 960; x += gridSize) {
+      for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath()
         ctx.moveTo(x, 0)
-        ctx.lineTo(x, 540)
+        ctx.lineTo(x, canvas.height)
         ctx.stroke()
       }
-      for (let y = 0; y < 540; y += gridSize) {
+      for (let y = 0; y < canvas.height; y += gridSize) {
         ctx.beginPath()
         ctx.moveTo(0, y)
-        ctx.lineTo(960, y)
+        ctx.lineTo(canvas.width, y)
         ctx.stroke()
       }
 
-      // Dibujar cables o flujos de información en el fondo
-      ctx.strokeStyle = 'rgba(6, 182, 212, 0.06)'
-      ctx.lineWidth = 2
+      // Dibujar cables que conectan dinámicamente los nodos
+      ctx.strokeStyle = 'rgba(6, 182, 212, 0.08)'
+      ctx.lineWidth = 1.5
       ctx.beginPath()
-      ctx.moveTo(180, 160)
-      ctx.lineTo(480, 220)
-      ctx.lineTo(780, 160)
-      ctx.moveTo(180, 380)
-      ctx.lineTo(480, 220)
-      ctx.lineTo(780, 380)
-      ctx.moveTo(480, 220)
-      ctx.lineTo(480, 430)
+      const aboutNode = nodes.current.find(n => n.id === 'about')
+      if (aboutNode) {
+        nodes.current.forEach(node => {
+          if (node.id !== 'about') {
+            ctx.moveTo(aboutNode.x, aboutNode.y)
+            ctx.lineTo(node.x, node.y)
+          }
+        })
+      }
       ctx.stroke()
 
       // B. ENTORNO DE HABILIDADES (Skills Core - Generador de energía)
-      const coreX = 180
-      const coreY = 380
+      const skillsNode = nodes.current.find(n => n.id === 'skills')
+      const coreX = skillsNode ? skillsNode.x : 180
+      const coreY = skillsNode ? skillsNode.y : 380
       ctx.shadowBlur = 15
       ctx.shadowColor = '#f43f5e'
       ctx.fillStyle = 'rgba(244, 63, 94, 0.1)'
@@ -794,9 +871,9 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
     const clientX = e.clientX - rect.left
     const clientY = e.clientY - rect.top
 
-    // Escalar coordenadas lógicas de 960x540
-    const x = (clientX / rect.width) * 960
-    const y = (clientY / rect.height) * 540
+    // Escalar coordenadas lógicas del Canvas dinámico
+    const x = (clientX / rect.width) * canvasRef.current.width
+    const y = (clientY / rect.height) * canvasRef.current.height
 
     // Comprobar si hizo click en un nodo directamente
     let clickedNode = false
@@ -818,7 +895,7 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
   // Soporte Táctil (Joystick móvil)
   const handleTouchStart = (e: React.TouchEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current?.getBoundingClientRect()
-    if (!rect) return
+    if (!rect || !canvasRef.current) return
 
     initAudio() // Iniciar audio en primer toque
 
@@ -826,11 +903,11 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
     const clientX = touch.clientX - rect.left
     const clientY = touch.clientY - rect.top
 
-    const x = (clientX / rect.width) * 960
-    const y = (clientY / rect.height) * 540
+    const x = (clientX / rect.width) * canvasRef.current.width
+    const y = (clientY / rect.height) * canvasRef.current.height
 
     // Si toca en la mitad izquierda, activar Joystick virtual
-    if (x < 480) {
+    if (x < canvasRef.current.width * 0.4) {
       joystickRef.current = {
         active: true,
         startX: x,
@@ -860,14 +937,14 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
 
   const handleTouchMove = (e: React.TouchEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current?.getBoundingClientRect()
-    if (!rect || !joystickRef.current.active) return
+    if (!rect || !joystickRef.current.active || !canvasRef.current) return
 
     const touch = e.targetTouches[0]
     const clientX = touch.clientX - rect.left
     const clientY = touch.clientY - rect.top
 
-    const x = (clientX / rect.width) * 960
-    const y = (clientY / rect.height) * 540
+    const x = (clientX / rect.width) * canvasRef.current.width
+    const y = (clientY / rect.height) * canvasRef.current.height
 
     const joystick = joystickRef.current
     const dx = x - joystick.startX
@@ -889,9 +966,9 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
   }
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto rounded-2xl border border-primary/20 bg-black/60 shadow-[0_0_40px_rgba(0,0,0,0.8)] overflow-hidden no-print">
+    <div className="relative w-full h-full flex flex-col bg-black overflow-hidden no-print">
       {/* HUD superior */}
-      <div className="flex items-center justify-between px-6 py-3 border-b border-primary/20 bg-muted/20 font-mono text-xs text-muted-foreground select-none z-20 relative">
+      <div className="flex items-center justify-between px-6 py-3 border-b border-primary/20 bg-muted/20 font-mono text-xs text-muted-foreground select-none z-20 relative shrink-0">
         <div className="flex items-center gap-3">
           <span className="flex items-center gap-1.5 text-cyan-400 font-bold">
             <span className="inline-block size-2 rounded-full bg-cyan-400 animate-ping" />
@@ -913,21 +990,11 @@ export default function GamePortfolio({ onExitGameMode, name, avatarUrl, locatio
           >
             {audioEnabled ? <Volume2 className="size-4 text-primary" /> : <VolumeX className="size-4" />}
           </Button>
-
-          {/* Salir de modo juego */}
-          <Button
-            size="sm"
-            onClick={onExitGameMode}
-            className="font-mono text-xs bg-primary/25 border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-          >
-            <ArrowRightLeft className="size-3.5 mr-2" />
-            MODO WEB
-          </Button>
         </div>
       </div>
 
       {/* Contenedor del Canvas */}
-      <div className="relative aspect-[16/9] w-full bg-[#05070f]">
+      <div className="relative flex-1 bg-[#05070f] overflow-hidden">
         <canvas
           ref={canvasRef}
           onMouseDown={handleCanvasMouseDown}

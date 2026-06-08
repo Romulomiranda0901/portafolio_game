@@ -34,10 +34,6 @@ interface SiteHeaderProps {
   email: string
   /** Abrir panel de configuración */
   onOpenSettings: () => void
-  /** Estado de modo juego */
-  gameMode: boolean
-  /** Alternar modo juego */
-  onToggleGameMode: () => void
 }
 
 /**
@@ -49,8 +45,6 @@ export default function SiteHeader({
   githubUrl,
   email,
   onOpenSettings,
-  gameMode,
-  onToggleGameMode,
 }: SiteHeaderProps) {
   const { resolvedTheme, toggleTheme, settings, update } = useSettings()
   const { t, i18n } = useTranslation('common')
@@ -99,41 +93,6 @@ export default function SiteHeader({
           Romulo Miranda
         </a>
 
-        {/* Navegación por secciones (scroll horizontal si desborda) */}
-        <nav className="hidden md:flex items-center gap-1 mx-2 overflow-x-auto">
-          {sectionIds.map((id) => {
-            const labelMap: Record<string, string> = {
-              home: t('nav.home', { defaultValue: 'Inicio' }),
-              about: t('nav.about', { defaultValue: 'Sobre mí' }),
-              skills: t('nav.skills', { defaultValue: 'Habilidades' }),
-              services: t('nav.services', { defaultValue: 'Servicios' }),
-              experience: t('nav.experience', { defaultValue: 'Experiencia' }),
-              projects: t('nav.projects', { defaultValue: 'Proyectos' }),
-              certifications: t('nav.certifications', { defaultValue: 'Certificaciones' }),
-            }
-            const isActive = activeId === id
-            return (
-              <a
-                key={id}
-                href={`#${id}`}
-                onClick={() => {
-                  if (gameMode) {
-                    onToggleGameMode()
-                  }
-                }}
-                aria-current={isActive ? 'page' : undefined}
-                className={`px-3 py-1.5 rounded-md text-sm transition font-medium ${
-                  isActive
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                }`}
-              >
-                {labelMap[id] ?? id}
-              </a>
-            )
-          })}
-        </nav>
-
         {/* Acciones a la derecha */}
         <div className="ml-auto flex items-center gap-2">
           {/* Botón rápido de idioma para móvil */}
@@ -174,17 +133,6 @@ export default function SiteHeader({
               {t('lang.en')}
             </Button>
           </div>
-
-          {/* Modo Juego / Modo Web */}
-          <Button
-            variant={gameMode ? 'default' : 'outline'}
-            className={gameMode ? 'bg-primary text-primary-foreground border-transparent animate-pulse mr-1' : 'bg-transparent mr-1'}
-            onClick={onToggleGameMode}
-            title={gameMode ? 'Modo Web Clásico' : 'Modo Arcade Juego'}
-          >
-            <Gamepad2 className="size-4 mr-2" />
-            <span className="hidden sm:inline">{gameMode ? 'Modo Web' : 'Modo Arcade'}</span>
-          </Button>
 
           {/* Tema */}
           <Button
