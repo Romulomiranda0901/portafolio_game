@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 230 47% 4%; /* Deep cosmic dark #05070f */
+  --foreground: 210 40% 98%;
+  --card: 228 39% 7.8%; /* Glassmorphic dark card #0c0f1d */
+  --card-foreground: 210 40% 98%;
+  --popover: 228 39% 7.8%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 228 39% 7.8%;
+  --secondary: 226 38% 12%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 226 38% 12%;
+  --muted-foreground: 217 15% 70%;
+  --accent: 226 38% 16%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 228 30% 12%;
+  --input: 228 30% 12%;
+  --ring: 226 83% 53%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  overscroll-behavior: none;
+  font-synthesis-weight: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Estilos Modernos Año 2030 (Tuani) --- */
+
+/* Fondos con malla de gradiente sutil y animado */
+.dark body {
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(var(--primary) / 0.06) 0px, transparent 55%),
+    radial-gradient(at 100% 100%, hsla(262, 83%, 58%, 0.05) 0px, transparent 55%);
+  background-attachment: fixed;
+}
+
+/* Efectos de Glassmorphism para las tarjetas */
+.glass-card {
+  background: hsl(var(--card) / 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid hsl(var(--border) / 0.6);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: hsl(var(--primary) / 0.4);
+  box-shadow: 
+    0 12px 20px -8px hsla(var(--primary) / 0.25),
+    0 0 2px 1px hsla(var(--primary) / 0.15);
+}
+
+/* Scrollbar futurista */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
+}
+
+html > body * {
+  border-color: hsl(var(--border));
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary) / 0.3) transparent;
+}
