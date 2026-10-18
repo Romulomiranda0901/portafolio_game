@@ -54,66 +54,149 @@ html {
 
 body {
   color: hsl(var(--foreground));
-  background-color: hsl(var(--background));
+  background-color: #030712;
   overscroll-behavior: none;
   font-synthesis-weight: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
-/* --- Estilos Modernos Año 2030 (Tuani) --- */
+/* --- SISTEMA DE DISEÑO INTERACTIVO 3D: CYBERNETIC NEURAL HUD --- */
 
-/* Fondos con malla de gradiente sutil y animado */
+/* Fondo abisal con rejilla de coordenadas cuánticas */
 .dark body {
+  background-color: #030712;
   background-image: 
-    radial-gradient(at 0% 0%, hsla(var(--primary) / 0.06) 0px, transparent 55%),
-    radial-gradient(at 100% 100%, hsla(262, 83%, 58%, 0.05) 0px, transparent 55%);
+    linear-gradient(to right, rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 10%, rgba(0, 242, 254, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 85%, rgba(168, 85, 247, 0.06) 0%, transparent 60%);
+  background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
   background-attachment: fixed;
 }
 
-/* Efectos de Glassmorphism para las tarjetas */
+/* Efectos de Glassmorphism Holográfico Tier 1 y 2 */
 .glass-card {
-  background: hsl(var(--card) / 0.6);
-  backdrop-filter: blur(16px);
-  border: 1px solid hsl(var(--border) / 0.6);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(6, 9, 25, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 242, 254, 0.03);
 }
 
 .glass-card:hover {
-  transform: translateY(-4px);
-  border-color: hsl(var(--primary) / 0.4);
+  border-color: rgba(0, 242, 254, 0.5);
   box-shadow: 
-    0 12px 20px -8px hsla(var(--primary) / 0.25),
-    0 0 2px 1px hsla(var(--primary) / 0.15);
+    0 10px 40px -10px rgba(0, 242, 254, 0.3),
+    inset 0 0 20px rgba(0, 242, 254, 0.08);
 }
 
-/* Scrollbar futurista */
+/* Panel HUD táctico con biseles y esquinas chamfered */
+.hud-panel {
+  position: relative;
+  background: rgba(10, 13, 29, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+}
+
+.hud-panel::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #00f2fe;
+  border-left: 2px solid #00f2fe;
+}
+
+.hud-panel::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #00f2fe;
+  border-right: 2px solid #00f2fe;
+}
+
+/* Texto de resplandor Neón */
+.glow-text-cyan {
+  color: #00f2fe;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.6), 0 0 20px rgba(0, 242, 254, 0.2);
+}
+
+.glow-text-violet {
+  color: #c084fc;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.6), 0 0 20px rgba(168, 85, 247, 0.2);
+}
+
+.glow-text-rose {
+  color: #fb7185;
+  text-shadow: 0 0 10px rgba(244, 63, 94, 0.6), 0 0 20px rgba(244, 63, 94, 0.2);
+}
+
+.glow-text-emerald {
+  color: #34d399;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.6), 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+/* Bordes Neón Resplandecientes */
+.glow-border-cyan {
+  border-color: #00f2fe;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.35);
+}
+
+/* Efecto Scanline sutil estilo Holo-Display */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 242, 254, 0.02) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.01),
+    rgba(0, 255, 0, 0.005),
+    rgba(0, 0, 255, 0.01)
+  );
+  background-size: 100% 3px, 3px 100%;
+}
+
+/* Botón Cibernético Táctico */
+.cyber-btn {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-btn:hover {
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}
+
+/* Scrollbar táctica cyberpunk */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(3, 7, 18, 0.8);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary) / 0.3);
-  border-radius: 9999px;
+  background: rgba(0, 242, 254, 0.3);
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.6);
-}
-
-html > body * {
-  border-color: hsl(var(--border));
+  background: rgba(0, 242, 254, 0.7);
+  box-shadow: 0 0 10px #00f2fe;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: hsl(var(--primary) / 0.3) transparent;
+  scrollbar-color: rgba(0, 242, 254, 0.3) rgba(3, 7, 18, 0.8);
 }

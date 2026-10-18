@@ -7,7 +7,29 @@ module.exports = {
       center: true,
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
       colors: {
+        abyss: '#030712',
+        'surface-dark': '#060919',
+        'surface-card': '#0f1223',
+        hcyan: {
+          DEFAULT: '#00f2fe',
+          dim: '#00dce6',
+          glow: 'rgba(0, 242, 254, 0.4)',
+        },
+        eviolet: {
+          DEFAULT: '#a855f7',
+          dim: '#8b5cf6',
+          glow: 'rgba(168, 85, 247, 0.4)',
+        },
+        cmagenta: {
+          DEFAULT: '#f43f5e',
+          glow: 'rgba(244, 63, 94, 0.4)',
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -81,10 +103,21 @@ module.exports = {
             height: '0',
           },
         },
+        'pulse-glow': {
+          '0%, 100%': { opacity: '1', filter: 'drop-shadow(0 0 15px rgba(0, 242, 254, 0.6))' },
+          '50%': { opacity: '0.6', filter: 'drop-shadow(0 0 5px rgba(0, 242, 254, 0.2))' },
+        },
+        'warp-drift': {
+          '0%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
+          '100%': { transform: 'translateY(0px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-glow': 'pulse-glow 2.5s infinite ease-in-out',
+        'warp-drift': 'warp-drift 4s infinite ease-in-out',
       },
     },
   },

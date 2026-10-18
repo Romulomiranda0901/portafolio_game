@@ -82,13 +82,15 @@ function AccentSwatch({
 }) {
   const style = useMemo(() => {
     const map: Record<string, string> = {
+      cyan: 'from-cyan-400 to-blue-500',
       violet: 'from-violet-500 to-fuchsia-500',
-      blue: 'from-blue-500 to-cyan-500',
+      rose: 'from-rose-500 to-pink-500',
       emerald: 'from-emerald-500 to-teal-500',
+      blue: 'from-blue-500 to-cyan-500',
       amber: 'from-amber-500 to-orange-500',
       zinc: 'from-zinc-700 to-zinc-500',
     }
-    return map[accent] ?? 'from-zinc-700 to-zinc-500'
+    return map[accent] ?? 'from-cyan-400 to-blue-500'
   }, [accent])
   return (
     <button
